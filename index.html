@@ -1,203 +1,195 @@
 <!DOCTYPE html>
 <html lang="ps" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>زما د کوډونو ویب سایټ</title>
-    <style>
-        /* د ویب سایټ عمومي ډیزاین */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #0f172a; /* تیاره شنه/نیلي رنګ */
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
-
-        /* د سر پاڼه (Header) */
-        header {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 2px solid #38bdf8;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            color: #38bdf8; /* روښانه نیلي رنګ */
-            margin-bottom: 10px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #94a3b8;
-        }
-
-        /* د کوډونو برخه */
-        .container {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        /* د هر کوډ کارت */
-        .code-card {
-            background-color: #1e293b;
-            border-radius: 12px;
-            padding: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border: 1px solid #334155;
-        }
-
-        .code-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(56, 189, 248, 0.2);
-            border-color: #38bdf8;
-        }
-
-        .code-card h2 {
-            color: #f472b6; /* ګلابي رنګ */
-            margin-bottom: 10px;
-            font-size: 1.4rem;
-        }
-
-        .code-card p {
-            color: #94a3b8;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-        }
-
-        /* د کوډ بلاک ښکلا */
-        pre {
-            background-color: #0f172a;
-            padding: 15px;
-            border-radius: 8px;
-            overflow-x: auto;
-            border-left: 4px solid #38bdf8;
-            direction: ltr; /* کوډ باید کیڼ اړخ ته وي */
-            text-align: left;
-        }
-
-        code {
-            font-family: 'Courier New', Courier, monospace;
-            color: #a5b4fc;
-            font-size: 0.9rem;
-        }
-
-        /* د کاپي کولو تڼۍ */
-        .copy-btn {
-            background-color: #38bdf8;
-            color: #0f172a;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-            margin-top: 10px;
-            transition: background 0.3s;
-        }
-
-        .copy-btn:hover {
-            background-color: #0ea5e9;
-        }
-
-        /* د پاڼې فوټر */
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            background-color: #1e293b;
-            color: #94a3b8;
-            border-top: 1px solid #334155;
-        }
-
-        /* د موبایل لپاره ځانګړی ډیزاین */
-        @media (max-width: 600px) {
-            header h1 { font-size: 1.8rem; }
-            .container { grid-template-columns: 1fr; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#111827">
+<title>CodeHub نړیوال | د کوډونو ټولګه</title>
+<style>
+:root{
+  --bg:#0b1020;--panel:#141d35;--panel2:#1b2745;--text:#f8fafc;--muted:#aab6d3;
+  --cyan:#38bdf8;--violet:#a78bfa;--pink:#f472b6;--lime:#a3e635;--orange:#fb923c;
+  --line:rgba(255,255,255,.11);--shadow:0 18px 50px rgba(0,0,0,.28)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 8% 5%,rgba(124,58,237,.22),transparent 27%),radial-gradient(circle at 90% 15%,rgba(14,165,233,.18),transparent 25%),var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,sans-serif;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;max-width:1180px;margin:auto;padding:18px 22px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.15rem}
+.logo{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,var(--cyan),var(--violet),var(--pink));color:#101426;font-size:1.35rem;box-shadow:0 8px 25px #8b5cf655}
+.nav{display:flex;gap:18px;color:var(--muted);font-size:.94rem}
+.nav a:hover{color:white}
+.lang{border:1px solid var(--line);background:#ffffff0b;color:white;border-radius:12px;padding:8px 12px}
+.hero{max-width:1180px;margin:22px auto 0;padding:56px 22px 42px;text-align:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid #38bdf855;background:#38bdf815;color:#bae6fd;border-radius:99px;padding:6px 14px;font-size:.86rem}
+h1{font-size:clamp(2.1rem,5vw,4.3rem);line-height:1.18;margin:20px auto 14px;max-width:850px;letter-spacing:-1.5px}
+.gradient{background:linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6,#fb923c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);max-width:690px;margin:0 auto 26px;font-size:1.06rem}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{border:0;border-radius:13px;padding:12px 19px;font-weight:800;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.primary{background:linear-gradient(110deg,#38bdf8,#8b5cf6);color:#08111f;box-shadow:0 10px 25px #6366f144}
+.secondary{background:#ffffff0d;border:1px solid var(--line);color:white}
+.stats{max-width:900px;margin:10px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:0 22px}
+.stat{background:#ffffff08;border:1px solid var(--line);border-radius:16px;padding:13px;text-align:center}
+.stat strong{display:block;font-size:1.35rem;color:#fff}.stat span{font-size:.82rem;color:var(--muted)}
+main{max-width:1180px;margin:34px auto;padding:0 22px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:30px 0 16px}
+h2{font-size:1.55rem;margin:0}.section-head p{color:var(--muted);margin:3px 0 0;font-size:.9rem}
+.searchbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.searchbar input,.searchbar select,.field input,.field select,.field textarea{width:100%;background:#0b1328;border:1px solid var(--line);border-radius:12px;padding:12px 14px;color:white;outline:none}
+.searchbar input{flex:1;min-width:220px}.searchbar select{width:auto;min-width:155px}
+input:focus,select:focus,textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #38bdf822}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.code-card{position:relative;overflow:hidden;background:linear-gradient(145deg,#1b2745,#111a31);border:1px solid var(--line);border-radius:19px;padding:19px;box-shadow:var(--shadow)}
+.code-card:before{content:"";position:absolute;inset:0 0 auto;height:4px;background:var(--accent,var(--cyan))}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.tag{font-size:.76rem;border-radius:99px;padding:4px 10px;background:#ffffff12;color:#dbeafe}
+.card-card-title{font-size:1.13rem;font-weight:850;margin:12px 0 4px}
+.desc{color:var(--muted);font-size:.9rem;min-height:48px;margin:0 0 13px}
+.code-box{direction:ltr;text-align:left;white-space:pre-wrap;overflow-wrap:anywhere;background:#080e1e;border:1px solid #ffffff12;border-radius:12px;padding:13px;color:#c4b5fd;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.92rem;min-height:54px}
+.card-bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:13px}
+.copy{background:linear-gradient(110deg,#a3e635,#38bdf8);color:#07111d;padding:9px 14px;border-radius:10px;font-weight:900;border:0;cursor:pointer}
+.by{font-size:.76rem;color:var(--muted)}
+.empty{grid-column:1/-1;text-align:center;padding:35px;border:1px dashed var(--line);border-radius:16px;color:var(--muted)}
+.add-panel{margin:42px 0;background:linear-gradient(140deg,#1b2745,#17152f);border:1px solid #a78bfa44;border-radius:22px;padding:25px;display:grid;grid-template-columns:.85fr 1.15fr;gap:25px}
+.add-info h2{font-size:1.7rem}.add-info p{color:var(--muted)}
+.color-dots{display:flex;gap:8px;margin-top:18px}.dot{width:23px;height:23px;border-radius:50%}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:.86rem;color:#dbeafe}.field.full{grid-column:1/-1}
+.field textarea{min-height:90px;resize:vertical}
+.notice{font-size:.8rem;color:#fde68a;background:#f59e0b12;border:1px solid #f59e0b44;padding:10px 12px;border-radius:11px;margin:12px 0}
+.form-msg{color:#bef264;font-size:.88rem;min-height:24px}
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:35px 0}
+.contact-card{background:#ffffff08;border:1px solid var(--line);border-radius:16px;padding:17px}
+.contact-card strong{display:block;margin-bottom:4px}.contact-card span{color:var(--muted);font-size:.88rem;overflow-wrap:anywhere}
+.contact-card a{color:#7dd3fc}
+footer{text-align:center;border-top:1px solid var(--line);padding:25px 15px;color:var(--muted);font-size:.85rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#dcfce7;color:#14532d;padding:10px 18px;border-radius:12px;font-weight:800;transition:.25s;z-index:5}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.add-panel{grid-template-columns:1fr}}
+@media(max-width:600px){.nav{display:none}.hero{padding-top:38px}.stats{gap:7px}.stat{padding:10px 5px}.grid{grid-template-columns:1fr}.contact{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.section-head{align-items:start;flex-direction:column}}
+</style>
 </head>
 <body>
+<header class="topbar">
+  <a class="brand" href="#"><span class="logo">✦</span><span>CodeHub <span class="gradient">Global</span></span></a>
+  <nav class="nav"><a href="#codes">د کوډونو ټولګه</a><a href="#add">کوډ ثبت کړه</a><a href="#contact">اړیکه</a></nav>
+  <a class="lang" href="#codes">🌐 نړیوال</a>
+</header>
 
-    <!-- د سر پاڼه -->
-    <header>
-        <h1>زما د کوډونو ټولګه 💻</h1>
-        <p>دلته زما غوره کوډونه، پروژې او نمونې وګورئ</p>
-    </header>
+<section class="hero">
+  <div class="eyebrow">🌍 د کوډونو نړیواله ټولنه</div>
+  <h1>خپل کوډونه <span class="gradient">ومومئ، شریک او کاپي</span> کړئ</h1>
+  <p>د نُسک د شریکولو وړ کوډونه او نور ګټور کوډونه په یوه منظم ځای کې. په اسانه یې ولټوئ، وګورئ او کاپي یې کړئ.</p>
+  <div class="actions"><a class="btn primary" href="#codes">کوډونه وګوره ↓</a><a class="btn secondary" href="#add">＋ نوی کوډ ثبت کړه</a></div>
+</section>
 
-    <!-- د کوډونو کانټینر -->
-    <div class="container">
+<div class="stats">
+  <div class="stat"><strong id="totalCount">3</strong><span>ټول کوډونه</span></div>
+  <div class="stat"><strong>🌐</strong><span>نړیوال لاسرسی</span></div>
+  <div class="stat"><strong>📋</strong><span>په یوه کلیک کاپي</span></div>
+</div>
 
-        <!-- کارت ۱ -->
-        <div class="code-card">
-            <h2>د HTML ساده پاڼه</h2>
-            <p>دا د یو ساده HTML کوډ نمونه ده چې تاسو یې کولی شئ په خپل ویب سایټ کې وکاروئ.</p>
-            <pre><code id="code1">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;زما پاڼه&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;ښه راغلاست!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-            <button class="copy-btn" onclick="copyCode('code1')">کوډ کاپي کړه</button>
-        </div>
+<main>
+<section id="codes">
+  <div class="section-head"><div><h2>📚 د کوډونو ټولګه</h2><p>د کوډ نوم ولټوئ یا د ډول له مخې یې فلټر کړئ.</p></div></div>
+  <div class="searchbar">
+    <input id="searchInput" type="search" placeholder="🔎 د کوډ نوم یا متن ولټوئ..." aria-label="د کوډ لټون">
+    <select id="categoryFilter" aria-label="د کوډ ډول">
+      <option value="all">ټول ډولونه</option><option value="Nusuk">Nusuk</option><option value="Referral">Referral</option><option value="Other">نور کوډونه</option>
+    </select>
+  </div>
+  <div class="grid" id="codeGrid"></div>
+</section>
 
-        <!-- کارت ۲ -->
-        <div class="code-card">
-            <h2>د CSS رنګونه</h2>
-            <p>د CSS په مرسته د ویب سایټ ښکلا او رنګونه څنګه تنظیم کړو.</p>
-            <pre><code id="code2">body {
-    background-color: #0f172a;
-    color: white;
-    font-family: Arial;
-}</code></pre>
-            <button class="copy-btn" onclick="copyCode('code2')">کوډ کاپي کړه</button>
-        </div>
-
-        <!-- کارت ۳ -->
-        <div class="code-card">
-            <h2>د JavaScript فنکشن</h2>
-            <p>دا یو ساده JavaScript فنکشن دی چې د کاروونکي سره مرسته کوي.</p>
-            <pre><code id="code3">function greet(name) {
-    alert("سلام " + name + "!");
-}
-greet("احمد");</code></pre>
-            <button class="copy-btn" onclick="copyCode('code3')">کوډ کاپي کړه</button>
-        </div>
-
+<section class="add-panel" id="add">
+  <div class="add-info">
+    <div class="eyebrow">🤝 له ټولنې سره مرسته وکړئ</div>
+    <h2>خپل کوډ دلته ثبت کړئ</h2>
+    <p>د کوډ نوم، ډول او متن ولیکئ. د ثبت وروسته به په همدې براوزر کې د کوډونو په ټولګه کې ښکاره شي.</p>
+    <div class="color-dots"><span class="dot" style="background:#38bdf8"></span><span class="dot" style="background:#a78bfa"></span><span class="dot" style="background:#f472b6"></span><span class="dot" style="background:#a3e635"></span><span class="dot" style="background:#fb923c"></span></div>
+  </div>
+  <form id="codeForm">
+    <div class="form-grid">
+      <div class="field"><label for="codeTitle">د کوډ نوم *</label><input id="codeTitle" required maxlength="70" placeholder="لکه: د نُسک د بلنې کوډ"></div>
+      <div class="field"><label for="codeCategory">د کوډ ډول *</label><select id="codeCategory" required><option value="Nusuk">Nusuk</option><option value="Referral">Referral</option><option value="Other">نور کوډونه</option></select></div>
+      <div class="field full"><label for="codeValue">کوډ *</label><input id="codeValue" required maxlength="180" dir="ltr" placeholder="خپل د شریکولو وړ کوډ دلته ولیکئ"></div>
+      <div class="field full"><label for="codeDescription">لنډ معلومات</label><textarea id="codeDescription" maxlength="220" placeholder="د دې کوډ په اړه لنډ معلومات..."></textarea></div>
+      <div class="field full"><label for="contributor">ستاسو نوم (اختیاري)</label><input id="contributor" maxlength="50" placeholder="نوم یا مستعار نوم"></div>
     </div>
+    <div class="notice">⚠️ شخصي نُسک ID، پاسورډ، OTP، د تایید کوډ، پاسپورټ یا نور محرمانه معلومات مه خپروئ. یوازې د عام شریکولو اجازه لرونکي کوډونه ثبت کړئ.</div>
+    <button class="btn primary" type="submit">＋ کوډ ثبت کړه</button>
+    <div class="form-msg" id="formMessage" role="status"></div>
+  </form>
+</section>
 
-    <!-- د پاڼې فوټر -->
-    <footer>
-        <p>© 2025 زما ویب سایټ | د کوډونو په مرسته جوړ شوی</p>
-    </footer>
+<section id="contact">
+  <div class="section-head"><div><h2>📞 له مدیر سره اړیکه</h2><p>د پوښتنو، وړاندیزونو او د کوډونو د ستونزو لپاره.</p></div></div>
+  <div class="contact">
+    <div class="contact-card">✉️ <strong>Gmail</strong><span><a href="mailto:mshahwoolasyar@gmail.com">mshahwoolasyar@gmail.com</a></span></div>
+    <div class="contact-card">📱 <strong>موبایل</strong><span><a href="tel:+93764848687">+93 764 84 86 87</a></span></div>
+    <div class="contact-card">💬 <strong>WhatsApp</strong><span><a href="https://wa.me/93764848687?text=سلام،%20زه%20ستاسو%20د%20CodeHub%20ویب‌سایټ%20په%20اړه%20پوښتنه%20لرم." target="_blank" rel="noopener">په WhatsApp پیغام واستوئ ↗</a></span></div>
+  </div>
+</section>
+</main>
 
-    <!-- د JavaScript کوډ د کاپي کولو لپاره -->
-    <script>
-        function copyCode(elementId) {
-            // د کوډ متن ترلاسه کول
-            const codeText = document.getElementById(elementId).innerText;
-            
-            // د کاپي کولو عملیه
-            navigator.clipboard.writeText(codeText).then(() => {
-                alert("کوډ په بریالیتوب سره کاپي شو! ✅");
-            }).catch(err => {
-                alert("کاپي کول په ناکامۍ سره مخ شو. ❌");
-            });
-        }
-    </script>
+<footer>© <span id="year"></span> CodeHub Global · د کوډونو د شریکولو ټولنه</footer>
+<div class="toast" id="toast" role="status">کوډ په بریالیتوب کاپي شو! ✓</div>
 
+<script>
+const starterCodes = [
+ {id:"demo1",title:"د نُسک د بلنې کوډ — نمونه",category:"Nusuk",value:"YOUR-SHAREABLE-CODE",description:"دا یوازې نمونه ده؛ خپل عام او د شریکولو وړ کوډ ورسره بدل کړئ.",by:"CodeHub",accent:"#38bdf8"},
+ {id:"demo2",title:"د Referral کوډ — نمونه",category:"Referral",value:"REF-EXAMPLE-2026",description:"د بلنې یا Referral کوډ نمونه.",by:"CodeHub",accent:"#a78bfa"},
+ {id:"demo3",title:"عمومي کوډ — نمونه",category:"Other",value:"SAMPLE-CODE-123",description:"د نورو ګټورو کوډونو لپاره نمونه کارت.",by:"CodeHub",accent:"#f472b6"}
+];
+const storageKey = "codehub_global_codes_v1";
+let codes = [];
+try { codes = JSON.parse(localStorage.getItem(storageKey) || "null") || starterCodes; } catch { codes = starterCodes; }
+const grid = document.getElementById("codeGrid");
+const search = document.getElementById("searchInput");
+const filter = document.getElementById("categoryFilter");
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function render(){
+ const q = search.value.trim().toLowerCase(), cat = filter.value;
+ const shown = codes.filter(c => (cat==="all" || c.category===cat) && [c.title,c.value,c.description,c.category].join(" ").toLowerCase().includes(q));
+ document.getElementById("totalCount").textContent = codes.length;
+ grid.innerHTML = shown.length ? shown.map(c => `
+  <article class="code-card" style="--accent:${esc(c.accent || "#38bdf8")}">
+   <div class="card-top"><span class="tag">${esc(c.category)}</span><span class="tag">🌐 شریک شوی</span></div>
+   <div class="card-card-title">${esc(c.title)}</div>
+   <p class="desc">${esc(c.description || "د دې کوډ لپاره اضافي معلومات نشته.")}</p>
+   <div class="code-box" id="code-${esc(c.id)}">${esc(c.value)}</div>
+   <div class="card-bottom"><span class="by">ثبت کوونکی: ${esc(c.by || "نامعلوم")}</span><button class="copy" type="button" data-copy="${esc(c.id)}">📋 کاپي</button></div>
+  </article>`).join("") : '<div class="empty">دا مهال کوم کوډ ونه موندل شو. بل نوم ولټوئ یا نوی کوډ ثبت کړئ.</div>';
+}
+function save(){ try{localStorage.setItem(storageKey,JSON.stringify(codes));}catch(e){} }
+function toast(msg){const t=document.getElementById("toast");t.textContent=msg;t.classList.add("show");setTimeout(()=>t.classList.remove("show"),2200);}
+grid.addEventListener("click", async e => {
+ const btn=e.target.closest("[data-copy]"); if(!btn)return;
+ const item=codes.find(c=>c.id===btn.dataset.copy); if(!item)return;
+ try{await navigator.clipboard.writeText(item.value);toast("کوډ په بریالیتوب کاپي شو! ✓");}
+ catch{const ta=document.createElement("textarea");ta.value=item.value;document.body.appendChild(ta);ta.select();document.execCommand("copy");ta.remove();toast("کوډ کاپي شو! ✓");}
+});
+search.addEventListener("input",render);filter.addEventListener("change",render);
+document.getElementById("codeForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const title=document.getElementById("codeTitle").value.trim();
+ const category=document.getElementById("codeCategory").value;
+ const value=document.getElementById("codeValue").value.trim();
+ const description=document.getElementById("codeDescription").value.trim();
+ const by=document.getElementById("contributor").value.trim() || "نامعلوم";
+ if(!title || !value)return;
+ codes.unshift({id:"c"+Date.now(),title,category,value,description,by,accent:["#38bdf8","#a78bfa","#f472b6","#a3e635","#fb923c"][Math.floor(Math.random()*5)]});
+ save();render();e.target.reset();
+ document.getElementById("formMessage").textContent="کوډ ثبت شو؛ اوس په همدې وسیله او براوزر کې ښکاري.";
+ setTimeout(()=>document.getElementById("formMessage").textContent="",5000);
+ document.getElementById("codes").scrollIntoView({behavior:"smooth"});
+});
+document.getElementById("year").textContent=new Date().getFullYear();
+render();
+</script>
 </body>
-</html> 
+</html>
