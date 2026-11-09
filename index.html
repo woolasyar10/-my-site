@@ -1,108 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#087f68"><title>Nusuk Code Hub</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#d9a928">
+<meta name="description" content="Community-powered sharing of Nusuk, Umrah, travel and discount codes.">
+<title>Nusuk Code Hub</title>
 <style>
-:root{--green:#087f68;--green2:#10a889;--dark:#064e43;--bg:#f2faf6;--ink:#153b33;--muted:#647b74;--line:#d7e9e1;--mint:#e0f5ec}
+:root{--gold:#d9a928;--gold2:#f1ca58;--ink:#17352d;--green:#08745b;--bg:#fffaf0;--line:#eadfbf;--muted:#6f756c;--white:#fff}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Arial,system-ui,sans-serif}
-header{background:linear-gradient(120deg,#064e43,#07866e,#13a184);color:white;padding:14px 18px}
-.nav,main{max-width:950px;margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.18rem}.logo{width:40px;height:40px;border-radius:13px;background:#ffffff25;display:grid;place-items:center;font-size:22px}
-select,input{font:inherit;border:1px solid var(--line);border-radius:12px;padding:12px;background:#fff;color:var(--ink);width:100%;outline:none}
-.lang{width:auto;background:#ffffff20;color:#fff;border-color:#ffffff70}.lang option{color:#123}
-main{padding:18px}.hero{text-align:center;padding:28px 8px 22px}.pill{display:inline-block;border-radius:30px;background:var(--mint);color:var(--green);padding:5px 13px;font-size:.82rem;font-weight:bold}
-h1{font-size:clamp(2rem,5vw,3rem);color:var(--dark);margin:13px 0 5px}.hero p,.muted{color:var(--muted)}
-.panel{background:#fff;border:1px solid var(--line);border-radius:19px;padding:20px;margin:17px 0;box-shadow:0 12px 32px #064e4310}
-.feature{border:2px solid var(--green2);background:linear-gradient(140deg,#fff,#effaf5)}
-.heading{display:flex;align-items:center;gap:11px;margin-bottom:13px}.number{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:var(--green);color:#fff;font-weight:bold}
-h2{margin:0;color:var(--dark);font-size:1.25rem}.muted{font-size:.9rem;margin:3px 0 12px}
-.code-row{display:flex;gap:9px;direction:ltr}.code-row input{text-align:center;font-size:1.2rem;font-weight:900;letter-spacing:.5px;color:#075e50;min-width:0}
-button{border:0;border-radius:12px;padding:12px 16px;font:inherit;font-weight:800;cursor:pointer}
-button:disabled{opacity:.42;cursor:not-allowed}
-.primary{background:linear-gradient(120deg,#087f68,#10a889);color:white;min-width:145px}
-.status{min-height:24px;color:var(--green);font-weight:bold;margin-top:9px;font-size:.9rem}
-.notice{background:#fff8e5;border:1px solid #f1dfaa;color:#755817;padding:10px 12px;border-radius:11px;margin-top:11px;font-size:.85rem}
-.section{margin:28px 2px 12px}.section h2{margin-bottom:3px}
-.search{margin:8px 0 14px}
-.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:15px;min-width:0}
-.card.locked{opacity:.58;background:#f8fbf9}
-.card-top{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:10px}
-.badge{background:var(--mint);color:var(--green);padding:3px 9px;border-radius:30px;font-size:.75rem;font-weight:bold}
-.code-text{direction:ltr;text-align:left;overflow-wrap:anywhere;background:#f1f7f4;border:1px dashed #b9d9cd;border-radius:10px;padding:12px;color:#075e50;font-family:monospace;font-weight:bold}
-.card-actions{display:flex;gap:8px;margin-top:11px}.copy{background:#e0f5ec;color:#076653;flex:1}.share{background:#e8f1ff;color:#2456a6;flex:1}
-.lock-text{font-size:.78rem;color:var(--muted);margin-top:8px}
-.add-form{display:flex;gap:9px}.add-form input{flex:1;min-width:0}.add{background:var(--dark);color:#fff;white-space:nowrap}
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-.contact{display:flex;align-items:center;gap:10px;border:1px solid var(--line);border-radius:14px;padding:13px;min-width:0;background:#fff}
-.icon{width:43px;height:43px;display:grid;place-items:center;border-radius:50%;flex:none;font-size:22px;background:var(--mint)}
-.whatsapp .icon{background:#dcfce7;color:#16a34a}
-.contact strong{display:block}.contact a{font-size:.84rem;color:var(--green);overflow-wrap:anywhere}
-footer{text-align:center;color:var(--muted);padding:23px;font-size:.85rem}
-.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;background:#064e43;color:white;padding:11px 17px;border-radius:12px;transition:.2s;pointer-events:none;z-index:4;max-width:90%;text-align:center}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:650px){.list,.contact-grid{grid-template-columns:1fr}.code-row{flex-direction:column}.primary{width:100%}.add-form{flex-direction:column}.panel{padding:16px}}
-</style></head>
+header{background:linear-gradient(115deg,#f5d36d,#d7a322);color:#18372d;padding:13px 18px;box-shadow:0 3px 16px #8b6b2220}
+.nav,main{max-width:1080px;margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem}.logo{width:42px;height:42px;border-radius:14px;background:#fff9e7;display:grid;place-items:center;font-size:23px;border:1px solid #fff}
+select,input,button{font:inherit;border-radius:11px;padding:11px 13px;border:1px solid var(--line)}select,input{background:#fffdf8;color:var(--ink);max-width:100%}button{cursor:pointer;font-weight:700;background:#fff;color:var(--green)}button:disabled{opacity:.45;cursor:not-allowed}
+.lang{background:#fff9e7;border-color:#fff}.wrap{padding:18px}.hero{text-align:center;padding:36px 8px 22px}.pill{display:inline-block;background:#fff0bf;border:1px solid #ecd17b;border-radius:30px;padding:5px 13px;font-size:.83rem;font-weight:700;color:#76570d}h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:15px 0 8px;color:#174b3c}.hero p,.muted{color:var(--muted)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;margin:17px 0;box-shadow:0 10px 26px #8c6b1710}.featured{background:linear-gradient(135deg,#fff9e5,#fff);border:2px solid var(--gold)}
+h2{font-size:1.25rem;margin:0;color:#174b3c}.sub{color:var(--muted);font-size:.9rem;margin:3px 0 13px}.head{display:flex;gap:11px;align-items:center;margin-bottom:12px}.num{background:var(--gold);color:#253a2e;border-radius:11px;width:35px;height:35px;display:grid;place-items:center;font-weight:900}
+.row{display:flex;gap:9px;align-items:center}.row input{flex:1;min-width:0;direction:ltr;text-align:center;font-weight:900;font-size:1.2rem}.primary{background:var(--green);color:white;border-color:var(--green)}.gold{background:var(--gold);color:#20382e;border-color:var(--gold)}.note{background:#fff8df;border:1px solid #eddaa0;border-radius:11px;padding:10px;margin-top:12px;font-size:.86rem}
+.section{margin:28px 0 12px}.section p{margin:3px 0;color:var(--muted);font-size:.9rem}.search{width:100%;margin:10px 0 14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px}.tag{display:inline-block;background:#fff1c7;color:#795b0d;padding:3px 9px;border-radius:20px;font-size:.76rem;font-weight:bold}.card h3{margin:8px 0;color:#174b3c}.code{background:#f7f5eb;border:1px dashed #dfcc8e;border-radius:9px;padding:10px;direction:ltr;text-align:left;overflow-wrap:anywhere;font:700 1rem monospace}.bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}.small{font-size:.8rem;color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:.88rem;font-weight:700}.full{grid-column:1/-1}.field input,.field select{width:100%}.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.contact{border:1px solid var(--line);border-radius:13px;padding:13px;overflow-wrap:anywhere}.contact a{color:var(--green);font-weight:700}.adminbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.admin-item{border-top:1px solid var(--line);padding:10px 0;display:flex;justify-content:space-between;gap:8px;align-items:center}.danger{color:#a32929;border-color:#e5baba}.status{min-height:22px;color:var(--green);font-size:.9rem;font-weight:700}.hide{display:none!important}footer{text-align:center;color:var(--muted);padding:25px}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;background:#174b3c;color:white;padding:10px 16px;border-radius:12px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:650px){.cards,.contactgrid,.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.row{flex-direction:column}.row>*{width:100%}.panel{padding:15px}.nav{align-items:flex-start}.brand{font-size:1rem}}
+</style>
+</head>
 <body>
 <header><div class="nav"><div class="brand"><span class="logo">۞</span><span>Nusuk Code Hub</span></div>
-<select id="language" class="lang" aria-label="Language"><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option><option value="ur">اردو</option></select></div></header>
-<main>
-<section class="hero"><span class="pill" data-t="eyebrow">Shareable codes community</span><h1 data-t="title">Copy. Share. Connect.</h1><p data-t="intro">Copy the featured Nusuk code first. Then copy or share the other codes in order.</p></section>
-
-<section class="panel feature">
-<div class="heading"><span class="number">1</span><div><h2 data-t="featured">Your Nusuk code — first</h2><div class="muted" data-t="firstHelp">This code must be copied before any other code.</div></div></div>
-<div class="code-row"><input value="NG-LdD0cQSR" id="ownerCode" readonly><button class="primary" id="copyOwner">📋 <span data-t="copyNusuk">Copy Nusuk code</span></button></div>
-<div class="status" id="ownerStatus" aria-live="polite"></div>
-<div class="notice" data-t="security">Only share public referral codes. Never post passwords, OTPs, private Nusuk IDs or login details.</div>
-</section>
-
-<div class="section"><h2 data-t="community">Community codes</h2><div class="muted" data-t="sequence">Copy or share each code to unlock the next one.</div></div>
-<input class="search" id="search" type="search" placeholder="Search codes..." data-ph="search">
-<div class="list" id="codeList"></div>
-
-<section class="panel">
-<div class="heading"><span class="number">＋</span><div><h2 data-t="addTitle">Share a code</h2><div class="muted" data-t="addHelp">Enter only the code. No description is needed.</div></div></div>
-<form id="addForm" class="add-form"><input id="newCode" required maxlength="180" dir="ltr" placeholder="Paste a shareable code"><button class="add" type="submit" data-t="addBtn">＋ Add code</button></form>
-<div class="muted" style="margin-top:10px;font-size:.82rem" data-t="localNote">Demo version: codes added here are stored in this browser only. Global sharing for everyone needs an online database.</div>
-</section>
-
-<section class="panel">
-<div class="heading"><span class="number">✦</span><div><h2 data-t="contactTitle">Contact</h2><div class="muted" data-t="contactHelp">Contact the website owner.</div></div></div>
-<div class="contact-grid">
-<div class="contact"><span class="icon">✉️</span><div><strong>Gmail</strong><a href="mailto:mshahwoolasyar@gmail.com">mshahwoolasyar@gmail.com</a></div></div>
-<div class="contact"><span class="icon">📞</span><div><strong data-t="phone">Phone</strong><a href="tel:+93764848687">+93 764 84 86 87</a></div></div>
-<div class="contact whatsapp"><span class="icon">🟢</span><div><strong>WhatsApp</strong><a href="https://wa.me/93764848687?text=Hello%2C%20I%20have%20a%20question%20about%20Nusuk%20Code%20Hub." target="_blank" rel="noopener" data-t="whatsapp">Chat on WhatsApp ↗</a></div></div>
+<select id="lang" class="lang" aria-label="Language"><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option><option value="ur">اردو</option></select></div></header>
+<main class="wrap">
+<section class="hero"><span class="pill" data-i="eyebrow">Community code sharing platform</span><h1 data-i="headline">Share useful codes with the world</h1><p data-i="intro">A community-powered collection of referral and travel codes.</p></section>
+<section class="panel featured"><div class="head"><span class="num">★</span><div><h2 data-i="featured">Featured Nusuk code</h2><div class="sub" data-i="featuredSub">The owner's featured code</div></div></div>
+<div class="row"><input id="ownerCode" value="NG-LdD0cQSR" readonly><button class="primary" id="copyOwner" data-i="copy">Copy code</button></div><div class="status" id="ownerStatus"></div><div class="note" data-i="featureNote">Copy the featured code first. Community copy progress is saved on this device only.</div></section>
+<div class="section"><h2 data-i="community">Community codes</h2><p data-i="communitySub">Browse active codes shared by community members.</p></div>
+<input id="search" class="search" type="search" placeholder="Search codes or categories">
+<div id="cards" class="cards"><p class="muted">Connecting to the shared database…</p></div>
+<section class="panel"><div class="head"><span class="num">＋</span><div><h2 data-i="submit">Submit a code</h2><div class="sub" data-i="submitSub">Your submission will be sent to the shared database.</div></div></div>
+<form id="submitForm" class="formgrid">
+<div class="field"><label data-i="codeLabel" for="newCode">Code</label><input id="newCode" required maxlength="180" dir="ltr" placeholder="Enter referral code"></div>
+<div class="field"><label data-i="categoryLabel" for="category">Category</label><select id="category"><option value="nusuk">Nusuk</option><option value="umrah">Umrah</option><option value="travel">Travel</option><option value="discount">Discount</option><option value="other">Other</option></select></div>
+<div class="field full"><label data-i="nameLabel" for="newTitle">Short description (optional)</label><input id="newTitle" maxlength="80" placeholder="e.g. Umrah referral"></div>
+<div class="field full"><button class="gold" type="submit" data-i="submitBtn">Submit code</button><div id="submitStatus" class="status"></div></div>
+</form><p class="small" data-i="moderation">Submissions are added as pending and require owner approval before appearing publicly.</p></section>
+<section class="panel"><div class="head"><span class="num">☎</span><div><h2 data-i="contact">Contact the owner</h2><div class="sub" data-i="contactSub">Questions, corrections or partnership requests</div></div></div>
+<div class="contactgrid">
+<div class="contact">✉️ <b>Gmail</b><br><a href="mailto:mshahwoolasyar@gmail.com">mshahwoolasyar@gmail.com</a></div>
+<div class="contact">📱 <b data-i="phone">Phone</b><br><a href="tel:+93764848687">+93 764 84 86 87</a></div>
+<div class="contact">💬 <b>WhatsApp</b><br><a href="https://wa.me/93764848687" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
 </div></section>
-</main><footer>© <span id="year"></span> Nusuk Code Hub</footer><div class="toast" id="toast" role="status"></div>
+<section class="panel"><div class="head"><span class="num">⚙</span><div><h2 data-i="admin">Owner administration</h2><div class="sub" data-i="adminSub">Sign in to review submissions and manage published codes.</div></div></div>
+<div id="loginBox"><form id="loginForm" class="formgrid"><div class="field"><label for="adminEmail">Email</label><input id="adminEmail" type="email" value="mshahwoolasyar@gmail.com" required></div><div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" required autocomplete="current-password"></div><div class="field full"><button class="primary" type="submit" data-i="login">Owner sign in</button><div id="loginStatus" class="status"></div></div></form></div>
+<div id="adminBox" class="hide"><div class="adminbar"><b id="adminIdentity"></b><button id="refreshAdmin">Refresh</button><button id="logout">Sign out</button></div><div id="pendingList"></div><h3>Published codes</h3><div id="manageList"></div></div>
+<p class="small" data-i="adminNote">Only the owner account configured in the database can approve, disable, edit or delete codes. Never share your password or secret key.</p>
+</section>
+</main><footer>© <span id="year"></span> Nusuk Code Hub · Community platform, not an official Nusuk service</footer><div id="toast" class="toast"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
+const SUPABASE_URL="https://ouniftavtctyzebycbjj.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY="sb_publishable_V4BRtwBECGkV-8qRZOayKA_2s_blp4O";
+const OWNER_EMAIL="mshahwoolasyar@gmail.com";
+const FEATURED="NG-LdD0cQSR";
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+const $=id=>document.getElementById(id);
 const words={
-en:{eyebrow:"Shareable codes community",title:"Copy. Share. Connect.",intro:"Copy the featured Nusuk code first. Then copy or share the other codes in order.",featured:"Your Nusuk code — first",firstHelp:"This code must be copied before any other code.",copyNusuk:"Copy Nusuk code",security:"Only share public referral codes. Never post passwords, OTPs, private Nusuk IDs or login details.",community:"Community codes",sequence:"Copy or share each code to unlock the next one.",search:"Search codes...",addTitle:"Share a code",addHelp:"Enter only the code. No description is needed.",addBtn:"＋ Add code",localNote:"Demo version: codes added here are stored in this browser only. Global sharing for everyone needs an online database.",contactTitle:"Contact",contactHelp:"Contact the website owner.",phone:"Phone",whatsapp:"Chat on WhatsApp ↗",copy:"Copy",share:"Share",locked:"Locked — copy/share the previous code first",done:"Done ✓",ownerDone:"Your Nusuk code is copied. The first community code is unlocked.",copied:"Code copied!",shared:"Share menu opened.",added:"Code added to this browser.",none:"No codes found."},
-ps:{eyebrow:"د شریکولو وړ کوډونو ټولنه",title:"کاپي کړه. شریک یې کړه. اړیکه ونیسه.",intro:"لومړی د نُسک ځانګړی کوډ کاپي کړه، بیا نور کوډونه په ترتیب کاپي یا شریک کړه.",featured:"ستا د نُسک کوډ — لومړی",firstHelp:"تر دې کوډ مخکې بل هېڅ کوډ نه خلاصیږي.",copyNusuk:"د نُسک کوډ کاپي",security:"یوازې عام د شریکولو کوډونه خپاره کړه. پاسورډ، OTP او شخصي نُسک معلومات مه خپروه.",community:"د ټولنې کوډونه",sequence:"هر کوډ کاپي یا شریک کړه، بیا به بل کوډ خلاص شي.",search:"کوډونه ولټوه...",addTitle:"کوډ شریک کړه",addHelp:"یوازې کوډ ولیکه؛ توضیحاتو ته اړتیا نشته.",addBtn:"＋ کوډ اضافه کړه",localNote:"دا نمونه کوډونه یوازې په همدې براوزر کې ساتي. د ټولو خلکو لپاره آنلاین ډیټابېس ته اړتیا ده.",contactTitle:"اړیکه",contactHelp:"د ویب‌سایټ له مالک سره اړیکه ونیسه.",phone:"شمېره",whatsapp:"په واټساپ اړیکه ونیسه ↗",copy:"کاپي",share:"شریکول",locked:"بند دی — لومړی مخکینی کوډ کاپي یا شریک کړه",done:"بشپړ شو ✓",ownerDone:"ستا د نُسک کوډ کاپي شو. لومړی ټولنیز کوډ خلاص شو.",copied:"کوډ کاپي شو!",shared:"د شریکولو برخه پرانیستل شوه.",added:"کوډ په همدې براوزر کې اضافه شو.",none:"کوم کوډ ونه موندل شو."},
-fa:{eyebrow:"جامعهٔ کدهای قابل اشتراک",title:"کاپی کنید. شریک کنید. وصل شوید.",intro:"ابتدا کد نسک را کاپی کنید؛ سپس کدهای دیگر را به ترتیب کاپی یا شریک کنید.",featured:"کد نسک شما — اول",firstHelp:"پیش از کاپی این کد، هیچ کد دیگری باز نمی‌شود.",copyNusuk:"کاپی کد نسک",security:"فقط کدهای عمومی را شریک کنید. رمز عبور و کدهای محرمانه را نشر نکنید.",community:"کدهای جامعه",sequence:"هر کد را کاپی یا شریک کنید تا کد بعدی باز شود.",search:"جستجوی کدها...",addTitle:"اشتراک کد",addHelp:"فقط کد را وارد کنید؛ توضیحات لازم نیست.",addBtn:"＋ افزودن کد",localNote:"این نسخه کدها را فقط در همین مرورگر ذخیره می‌کند؛ برای همه کاربران دیتابیس آنلاین لازم است.",contactTitle:"تماس",contactHelp:"با مدیر وب‌سایت تماس بگیرید.",phone:"شماره",whatsapp:"تماس در واتساپ ↗",copy:"کاپی",share:"اشتراک",locked:"قفل است — اول کد قبلی را کاپی یا شریک کنید",done:"انجام شد ✓",ownerDone:"کد نسک کاپی شد؛ کد اول جامعه باز شد.",copied:"کد کاپی شد!",shared:"بخش اشتراک باز شد.",added:"کد در همین مرورگر اضافه شد.",none:"کدی پیدا نشد."},
-ur:{eyebrow:"شیئر کیے جانے والے کوڈز کی کمیونٹی",title:"کاپی کریں۔ شیئر کریں۔ رابطہ بنائیں۔",intro:"پہلے نسک کوڈ کاپی کریں، پھر باقی کوڈز ترتیب سے کاپی یا شیئر کریں۔",featured:"آپ کا نسک کوڈ — سب سے پہلے",firstHelp:"اس کوڈ کو کاپی کیے بغیر کوئی دوسرا کوڈ نہیں کھلے گا۔",copyNusuk:"نسک کوڈ کاپی کریں",security:"صرف عوامی ریفرل کوڈز شیئر کریں۔ پاس ورڈ یا خفیہ کوڈز شائع نہ کریں۔",community:"کمیونٹی کوڈز",sequence:"ہر کوڈ کاپی یا شیئر کریں، پھر اگلا کوڈ کھلے گا۔",search:"کوڈ تلاش کریں...",addTitle:"کوڈ شیئر کریں",addHelp:"صرف کوڈ درج کریں؛ وضاحت کی ضرورت نہیں۔",addBtn:"＋ کوڈ شامل کریں",localNote:"یہ ڈیمو کوڈز صرف اسی براؤزر میں محفوظ کرتا ہے؛ سب کے لیے آن لائن ڈیٹابیس چاہیے۔",contactTitle:"رابطہ",contactHelp:"ویب سائٹ کے مالک سے رابطہ کریں۔",phone:"فون",whatsapp:"واٹس ایپ پر رابطہ ↗",copy:"کاپی",share:"شیئر",locked:"بند ہے — پہلے پچھلا کوڈ کاپی یا شیئر کریں",done:"مکمل ✓",ownerDone:"نسک کوڈ کاپی ہوگیا؛ پہلا کمیونٹی کوڈ کھل گیا۔",copied:"کوڈ کاپی ہوگیا!",shared:"شیئر مینو کھل گیا۔",added:"کوڈ اسی براؤزر میں شامل ہوگیا۔",none:"کوئی کوڈ نہیں ملا."}
+en:{eyebrow:"Community code sharing platform",headline:"Share useful codes with the world",intro:"A community-powered collection of referral and travel codes.",featured:"Featured Nusuk code",featuredSub:"The owner's featured code",copy:"Copy code",featureNote:"Copy the featured code first. Community copy progress is saved on this device only.",community:"Community codes",communitySub:"Browse active codes shared by community members.",submit:"Submit a code",submitSub:"Your submission will be sent to the shared database.",codeLabel:"Code",categoryLabel:"Category",nameLabel:"Short description (optional)",submitBtn:"Submit code",moderation:"Submissions are added as pending and require owner approval before appearing publicly.",contact:"Contact the owner",contactSub:"Questions, corrections or partnership requests",phone:"Phone",admin:"Owner administration",adminSub:"Sign in to review submissions and manage published codes.",login:"Owner sign in",adminNote:"Only the owner account configured in the database can approve, disable, edit or delete codes. Never share your password or secret key."},
+ps:{eyebrow:"د کوډونو د شریکولو نړیواله ټولنه",headline:"ګټور کوډونه له نړۍ سره شریک کړئ",intro:"د نسک، عمرې، سفر او تخفیف کوډونو ګډ مرکز.",featured:"ځانګړی د نسک کوډ",featuredSub:"د وېب‌پاڼې د مالک ځانګړی کوډ",copy:"کوډ کاپي کړه",featureNote:"لومړی ځانګړی کوډ کاپي کړه. د کاپي پرمختګ یوازې په همدې وسیله کې ساتل کېږي.",community:"د ټولنې کوډونه",communitySub:"د خلکو شریک کړي فعال کوډونه وګوره.",submit:"نوی کوډ وسپاره",submitSub:"ستا کوډ به مرکزي ډیټابېس ته واستول شي.",codeLabel:"کوډ",categoryLabel:"کټګوري",nameLabel:"لنډ وضاحت (اختیاري)",submitBtn:"کوډ وسپاره",moderation:"نوي کوډونه لومړی د تایید لپاره ساتل کېږي؛ تر تایید وروسته ښکاره کېږي.",contact:"له مالک سره اړیکه",contactSub:"پوښتنې، سمونونه یا وړاندیزونه",phone:"شمېره",admin:"د مالک مدیریت",adminSub:"د سپارل شویو کوډونو کتنه او مدیریت.",login:"د مالک ننوتل",adminNote:"یوازې د ډیټابېس له خوا ټاکل شوی مالک کوډونه تایید، بند، بدل یا حذف کولای شي. پاسورډ او پټ کیلي مه شریکوه."},
+fa:{eyebrow:"مرکز جهانی اشتراک کدها",headline:"کدهای مفید را با جهان شریک کنید",intro:"مجموعه‌ای از کدهای نسک، عمره، سفر و تخفیف.",featured:"کد ویژه نسک",featuredSub:"کد ویژه مالک وب‌سایت",copy:"کاپی کد",featureNote:"ابتدا کد ویژه را کاپی کنید. پیشرفت کاپی فقط در همین دستگاه ذخیره می‌شود.",community:"کدهای جامعه",communitySub:"کدهای فعال به اشتراک گذاشته‌شده را ببینید.",submit:"ثبت کد",submitSub:"کد شما به دیتابیس مرکزی فرستاده می‌شود.",codeLabel:"کد",categoryLabel:"دسته‌بندی",nameLabel:"توضیح کوتاه (اختیاری)",submitBtn:"ثبت کد",moderation:"کدهای تازه تا تأیید مالک به شکل عمومی نمایش داده نمی‌شوند.",contact:"تماس با مالک",contactSub:"پرسش، اصلاح یا پیشنهاد",phone:"شماره",admin:"مدیریت مالک",adminSub:"بازبینی و مدیریت کدها.",login:"ورود مالک",adminNote:"فقط حساب مالک تعیین‌شده در دیتابیس اجازه مدیریت دارد. رمز و کلید محرمانه را شریک نسازید."},
+ur:{eyebrow:"عالمی کوڈ شیئرنگ پلیٹ فارم",headline:"مفید کوڈز دنیا کے ساتھ شیئر کریں",intro:"نسک، عمرہ، سفر اور ڈسکاؤنٹ کوڈز کا مشترکہ مرکز۔",featured:"نمایاں نسک کوڈ",featuredSub:"ویب سائٹ کے مالک کا کوڈ",copy:"کوڈ کاپی کریں",featureNote:"پہلے نمایاں کوڈ کاپی کریں۔ کاپی کی پیش رفت صرف اسی ڈیوائس میں محفوظ ہوگی۔",community:"کمیونٹی کوڈز",communitySub:"لوگوں کے شیئر کردہ فعال کوڈز دیکھیں۔",submit:"کوڈ جمع کریں",submitSub:"آپ کا کوڈ مرکزی ڈیٹابیس میں بھیجا جائے گا۔",codeLabel:"کوڈ",categoryLabel:"قسم",nameLabel:"مختصر وضاحت (اختیاری)",submitBtn:"کوڈ جمع کریں",moderation:"نئے کوڈز مالک کی منظوری تک عوام کو نظر نہیں آئیں گے۔",contact:"مالک سے رابطہ",contactSub:"سوال، درستگی یا تجاویز",phone:"فون",admin:"مالک کا انتظام",adminSub:"جمع شدہ کوڈز کا جائزہ اور انتظام۔",login:"مالک لاگ اِن",adminNote:"صرف ڈیٹابیس میں مقرر مالک ہی کوڈز منظور، بند، تبدیل یا حذف کر سکتا ہے۔ پاس ورڈ یا خفیہ کلید شیئر نہ کریں."}
 };
-const $=id=>document.getElementById(id), dataKey="nusuk_hub_codes_v4", firstKey="nusuk_hub_first_done_v4";
-let lang="en",firstDone=localStorage.getItem(firstKey)==="yes",items;
-try{items=JSON.parse(localStorage.getItem(dataKey))||[]}catch{items=[]}
-function tr(k){return words[lang][k]||words.en[k]}
-function setLang(){lang=$("language").value;document.documentElement.lang=lang;document.documentElement.dir=["ps","fa","ur"].includes(lang)?"rtl":"ltr";document.querySelectorAll("[data-t]").forEach(e=>e.textContent=tr(e.dataset.t));document.querySelectorAll("[data-ph]").forEach(e=>e.placeholder=tr(e.dataset.ph));$("ownerStatus").textContent=firstDone?tr("ownerDone"):"";draw()}
-function notify(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200)}
-async function copyText(s){try{await navigator.clipboard.writeText(s)}catch{let x=document.createElement("textarea");x.value=s;document.body.appendChild(x);x.select();document.execCommand("copy");x.remove()}}
-async function shareText(s){if(navigator.share){try{await navigator.share({title:"Nusuk Code",text:s});return true}catch(e){if(e.name==="AbortError")return false}}await copyText(s);return false}
-$("copyOwner").onclick=async()=>{await copyText("NG-LdD0cQSR");firstDone=true;localStorage.setItem(firstKey,"yes");$("ownerStatus").textContent=tr("ownerDone");draw();notify(tr("copied"))};
-function draw(){let q=$("search").value.trim().toLowerCase(),root=$("codeList");root.innerHTML="";let visible=items.filter(x=>x.code.toLowerCase().includes(q));if(!visible.length){root.textContent=tr("none");return}
-visible.forEach(item=>{let index=items.indexOf(item),unlocked=firstDone&&items.slice(0,index).every(x=>x.done),done=!!item.done;
-let card=document.createElement("article");card.className="card"+(!unlocked&&!done?" locked":"");
-let top=document.createElement("div");top.className="card-top";let badge=document.createElement("span");badge.className="badge";badge.textContent="CODE "+(index+1);let state=document.createElement("span");state.className="lock-text";state.textContent=done?tr("done"):unlocked?tr("copy"):tr("locked");top.append(badge,state);
-let val=document.createElement("div");val.className="code-text";val.textContent=item.code;
-let actions=document.createElement("div");actions.className="card-actions";
-let cp=document.createElement("button");cp.className="copy";cp.textContent=done?tr("done"):"📋 "+tr("copy");cp.disabled=!unlocked||done;
-let sh=document.createElement("button");sh.className="share";sh.textContent="↗ "+tr("share");sh.disabled=!unlocked||done;
-async function markDone(){item.done=true;localStorage.setItem(dataKey,JSON.stringify(items));draw()}
-cp.onclick=async()=>{await copyText(item.code);await markDone();notify(tr("copied"))};
-sh.onclick=async()=>{let did=await shareText(item.code);if(did){await markDone();notify(tr("shared"))}else if(!navigator.share){await markDone();notify(tr("copied"))}};
-actions.append(cp,sh);card.append(top,val,actions);root.append(card);
-})}
-$("language").onchange=setLang;$("search").oninput=draw;
-$("addForm").onsubmit=e=>{e.preventDefault();let code=$("newCode").value.trim();if(!code)return;items.push({code,done:false});localStorage.setItem(dataKey,JSON.stringify(items));e.target.reset();draw();notify(tr("added"))};
-$("year").textContent=new Date().getFullYear();setLang();
+let lang="en", rows=[],session=null;
+function setLang(){lang=$("lang").value;document.documentElement.lang=lang;document.documentElement.dir=["ps","fa","ur"].includes(lang)?"rtl":"ltr";document.querySelectorAll("[data-i]").forEach(e=>e.textContent=words[lang][e.dataset.i]||words.en[e.dataset.i]||e.dataset.i)}
+function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200)}
+async function copyText(s){try{await navigator.clipboard.writeText(s)}catch{const t=document.createElement("textarea");t.value=s;document.body.append(t);t.select();document.execCommand("copy");t.remove()}toast(words[lang].copy+" ✓")}
+$("lang").onchange=setLang;
+$("copyOwner").onclick=async()=>{await copyText(FEATURED);localStorage.setItem("nch_featured_copied","1");$("ownerStatus").textContent="✓";};
+async function loadCodes(){const {data,error}=await db.from("nusuk_codes").select("id,code,category,title,is_active,created_at").eq("is_active",true).order("created_at",{ascending:false});if(error){$("cards").innerHTML='<p class="muted">Could not load codes. Please check the database setup.</p>';console.error(error);return}rows=data||[];draw()}
+function draw(){const q=$("search").value.toLowerCase().trim();const box=$("cards");box.innerHTML="";const filtered=rows.filter(r=>[r.code,r.category,r.title||""].join(" ").toLowerCase().includes(q));if(!filtered.length){box.innerHTML='<p class="muted">No active codes found yet.</p>';return}filtered.forEach(r=>{const card=document.createElement("article");card.className="card";const tag=document.createElement("span");tag.className="tag";tag.textContent=r.category;const h=document.createElement("h3");h.textContent=r.title||"Community code";const val=document.createElement("div");val.className="code";val.textContent=r.code;const b=document.createElement("div");b.className="bottom";const status=document.createElement("span");status.className="small";status.textContent="Active";const btn=document.createElement("button");btn.textContent="📋 "+words[lang].copy;btn.onclick=()=>copyText(r.code);b.append(status,btn);card.append(tag,h,val,b);box.append(card)})}
+$("search").oninput=draw;
+$("submitForm").onsubmit=async e=>{e.preventDefault();$("submitStatus").textContent="Sending…";const payload={p_code:$("newCode").value.trim(),p_category:$("category").value,p_title:$("newTitle").value.trim()||null};const {error}=await db.rpc("submit_nusuk_code",payload);if(error){$("submitStatus").textContent=error.message.includes("duplicate")?"This code has already been submitted.":error.message;return}$("submitForm").reset();$("submitStatus").textContent="Submitted for owner review. Thank you!";};
+$("loginForm").onsubmit=async e=>{e.preventDefault();$("loginStatus").textContent="Signing in…";const {data,error}=await db.auth.signInWithPassword({email:$("adminEmail").value.trim(),password:$("adminPassword").value});if(error){$("loginStatus").textContent=error.message;return}session=data.session;$("loginStatus").textContent="Signed in. Checking owner permissions…";await refreshAdmin()};
+async function refreshAdmin(){const {data:{user}}=await db.auth.getUser();if(!user){$("adminBox").classList.add("hide");return}if(user.email!==OWNER_EMAIL){$("loginStatus").textContent="This account is not the configured owner.";await db.auth.signOut();return}$("loginBox").classList.add("hide");$("adminBox").classList.remove("hide");$("adminIdentity").textContent=user.email;await loadAdminLists()}
+async function loadAdminLists(){const {data,error}=await db.from("nusuk_codes").select("*").order("created_at",{ascending:false});if(error){$("pendingList").textContent=error.message;return}const pending=(data||[]).filter(x=>!x.is_active);const active=(data||[]).filter(x=>x.is_active);renderAdminGroup("pendingList","Pending submissions",pending,true);renderAdminGroup("manageList","",active,false)}
+function renderAdminGroup(id,title,list,pending){const box=$(id);box.innerHTML="";if(title){const h=document.createElement("h3");h.textContent=title;box.append(h)}if(!list.length){const p=document.createElement("p");p.className="small";p.textContent="Nothing here.";box.append(p);return}list.forEach(r=>{const item=document.createElement("div");item.className="admin-item";const info=document.createElement("div");info.innerHTML="";const b=document.createElement("b");b.textContent=r.code;const sm=document.createElement("div");sm.className="small";sm.textContent=(r.title||r.category)+" · "+r.category;info.append(b,sm);const actions=document.createElement("div");actions.className="adminbar";if(pending){const approve=document.createElement("button");approve.className="gold";approve.textContent="Approve";approve.onclick=()=>adminUpdate(r.id,{is_active:true});actions.append(approve)}else{const toggle=document.createElement("button");toggle.textContent="Disable";toggle.onclick=()=>adminUpdate(r.id,{is_active:false});actions.append(toggle)}const edit=document.createElement("button");edit.textContent="Edit";edit.onclick=()=>adminEdit(r);actions.append(edit);const del=document.createElement("button");del.className="danger";del.textContent="Delete";del.onclick=()=>{if(confirm("Delete this code permanently?"))adminDelete(r.id)};actions.append(del);item.append(info,actions);box.append(item)})}
+async function adminEdit(r){
+  const code=prompt("Edit code:",r.code); if(code===null)return;
+  const title=prompt("Edit short description:",r.title||""); if(title===null)return;
+  const category=prompt("Category (nusuk, umrah, travel, discount, other):",r.category||"other"); if(category===null)return;
+  const cleanCategory=category.trim().toLowerCase();
+  if(!["nusuk","umrah","travel","discount","other"].includes(cleanCategory)){toast("Invalid category");return}
+  if(code.trim().length<3||code.trim().length>180){toast("Code must be 3–180 characters");return}
+  await adminUpdate(r.id,{code:code.trim(),title:title.trim()||null,category:cleanCategory});
+}
+async function adminUpdate(id,patch){const {error}=await db.from("nusuk_codes").update(patch).eq("id",id);if(error){toast(error.message);return}await loadCodes();await loadAdminLists()}
+async function adminDelete(id){const {error}=await db.from("nusuk_codes").delete().eq("id",id);if(error){toast(error.message);return}await loadCodes();await loadAdminLists()}
+$("refreshAdmin").onclick=loadAdminLists;$("logout").onclick=async()=>{await db.auth.signOut();$("adminBox").classList.add("hide");$("loginBox").classList.remove("hide");$("adminPassword").value=""};
+db.auth.onAuthStateChange((_event,s)=>{session=s;if(s)refreshAdmin()});
+$("year").textContent=new Date().getFullYear();setLang();loadCodes();db.auth.getSession().then(({data})=>{session=data.session;if(session)refreshAdmin()});
 </script></body></html>
