@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ps" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>زما د کوډونو ویب سایټ</title>
+    <style>
+        /* د ویب سایټ عمومي ډیزاین */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f172a; /* تیاره شنه/نیلي رنګ */
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        /* د سر پاڼه (Header) */
+        header {
+            background: linear-gradient(135deg, #1e293b, #0f172a);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 2px solid #38bdf8;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #38bdf8; /* روښانه نیلي رنګ */
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+        }
+
+        /* د کوډونو برخه */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* د هر کوډ کارت */
+        .code-card {
+            background-color: #1e293b;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #334155;
+        }
+
+        .code-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(56, 189, 248, 0.2);
+            border-color: #38bdf8;
+        }
+
+        .code-card h2 {
+            color: #f472b6; /* ګلابي رنګ */
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .code-card p {
+            color: #94a3b8;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        /* د کوډ بلاک ښکلا */
+        pre {
+            background-color: #0f172a;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            border-left: 4px solid #38bdf8;
+            direction: ltr; /* کوډ باید کیڼ اړخ ته وي */
+            text-align: left;
+        }
+
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            color: #a5b4fc;
+            font-size: 0.9rem;
+        }
+
+        /* د کاپي کولو تڼۍ */
+        .copy-btn {
+            background-color: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .copy-btn:hover {
+            background-color: #0ea5e9;
+        }
+
+        /* د پاڼې فوټر */
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background-color: #1e293b;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        /* د موبایل لپاره ځانګړی ډیزاین */
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- د سر پاڼه -->
+    <header>
+        <h1>زما د کوډونو ټولګه 💻</h1>
+        <p>دلته زما غوره کوډونه، پروژې او نمونې وګورئ</p>
+    </header>
+
+    <!-- د کوډونو کانټینر -->
+    <div class="container">
+
+        <!-- کارت ۱ -->
+        <div class="code-card">
+            <h2>د HTML ساده پاڼه</h2>
+            <p>دا د یو ساده HTML کوډ نمونه ده چې تاسو یې کولی شئ په خپل ویب سایټ کې وکاروئ.</p>
+            <pre><code id="code1">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;زما پاڼه&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;ښه راغلاست!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <button class="copy-btn" onclick="copyCode('code1')">کوډ کاپي کړه</button>
+        </div>
+
+        <!-- کارت ۲ -->
+        <div class="code-card">
+            <h2>د CSS رنګونه</h2>
+            <p>د CSS په مرسته د ویب سایټ ښکلا او رنګونه څنګه تنظیم کړو.</p>
+            <pre><code id="code2">body {
+    background-color: #0f172a;
+    color: white;
+    font-family: Arial;
+}</code></pre>
+            <button class="copy-btn" onclick="copyCode('code2')">کوډ کاپي کړه</button>
+        </div>
+
+        <!-- کارت ۳ -->
+        <div class="code-card">
+            <h2>د JavaScript فنکشن</h2>
+            <p>دا یو ساده JavaScript فنکشن دی چې د کاروونکي سره مرسته کوي.</p>
+            <pre><code id="code3">function greet(name) {
+    alert("سلام " + name + "!");
+}
+greet("احمد");</code></pre>
+            <button class="copy-btn" onclick="copyCode('code3')">کوډ کاپي کړه</button>
+        </div>
+
+    </div>
+
+    <!-- د پاڼې فوټر -->
+    <footer>
+        <p>© 2025 زما ویب سایټ | د کوډونو په مرسته جوړ شوی</p>
+    </footer>
+
+    <!-- د JavaScript کوډ د کاپي کولو لپاره -->
+    <script>
+        function copyCode(elementId) {
+            // د کوډ متن ترلاسه کول
+            const codeText = document.getElementById(elementId).innerText;
+            
+            // د کاپي کولو عملیه
+            navigator.clipboard.writeText(codeText).then(() => {
+                alert("کوډ په بریالیتوب سره کاپي شو! ✅");
+            }).catch(err => {
+                alert("کاپي کول په ناکامۍ سره مخ شو. ❌");
+            });
+        }
+    </script>
+
+</body>
+</html>
