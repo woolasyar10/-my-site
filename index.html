@@ -1,53 +1,256 @@
 <!doctype html>
 <html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#d9a928">
-<meta name="description" content="Community-powered sharing of Nusuk, Umrah, travel and discount codes.">
-<title>Nusuk Code Hub</title>
+<meta name="description" content="Woolasyar10 — global tools: visa check, Kankor results, currency exchange, and community codes.">
+<title>Woolasyar10 | Global Tools Hub</title>
 <style>
-:root{--gold:#d9a928;--gold2:#f1ca58;--ink:#17352d;--green:#08745b;--bg:#fffaf0;--line:#eadfbf;--muted:#6f756c;--white:#fff}
+:root{--gold:#d9a928;--gold2:#f1ca58;--ink:#17352d;--green:#08745b;--bg:#fffaf0;--line:#eadfbf;--muted:#6f756c;--white:#fff;--blue:#1e6fd9}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Arial,system-ui,sans-serif}
 header{background:linear-gradient(115deg,#f5d36d,#d7a322);color:#18372d;padding:13px 18px;box-shadow:0 3px 16px #8b6b2220}
-.nav,main{max-width:1080px;margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.15rem}.logo{width:42px;height:42px;border-radius:14px;background:#fff9e7;display:grid;place-items:center;font-size:23px;border:1px solid #fff}
-select,input,button{font:inherit;border-radius:11px;padding:11px 13px;border:1px solid var(--line)}select,input{background:#fffdf8;color:var(--ink);max-width:100%}button{cursor:pointer;font-weight:700;background:#fff;color:var(--green)}button:disabled{opacity:.45;cursor:not-allowed}
-.lang{background:#fff9e7;border-color:#fff}.wrap{padding:18px}.hero{text-align:center;padding:36px 8px 22px}.pill{display:inline-block;background:#fff0bf;border:1px solid #ecd17b;border-radius:30px;padding:5px 13px;font-size:.83rem;font-weight:700;color:#76570d}h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:15px 0 8px;color:#174b3c}.hero p,.muted{color:var(--muted)}
-.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;margin:17px 0;box-shadow:0 10px 26px #8c6b1710}.featured{background:linear-gradient(135deg,#fff9e5,#fff);border:2px solid var(--gold)}
-h2{font-size:1.25rem;margin:0;color:#174b3c}.sub{color:var(--muted);font-size:.9rem;margin:3px 0 13px}.head{display:flex;gap:11px;align-items:center;margin-bottom:12px}.num{background:var(--gold);color:#253a2e;border-radius:11px;width:35px;height:35px;display:grid;place-items:center;font-weight:900}
-.row{display:flex;gap:9px;align-items:center}.row input{flex:1;min-width:0;direction:ltr;text-align:center;font-weight:900;font-size:1.2rem}.primary{background:var(--green);color:white;border-color:var(--green)}.gold{background:var(--gold);color:#20382e;border-color:var(--gold)}.note{background:#fff8df;border:1px solid #eddaa0;border-radius:11px;padding:10px;margin-top:12px;font-size:.86rem}
-.section{margin:28px 0 12px}.section p{margin:3px 0;color:var(--muted);font-size:.9rem}.search{width:100%;margin:10px 0 14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px}.tag{display:inline-block;background:#fff1c7;color:#795b0d;padding:3px 9px;border-radius:20px;font-size:.76rem;font-weight:bold}.card h3{margin:8px 0;color:#174b3c}.code{background:#f7f5eb;border:1px dashed #dfcc8e;border-radius:9px;padding:10px;direction:ltr;text-align:left;overflow-wrap:anywhere;font:700 1rem monospace}.bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}.small{font-size:.8rem;color:var(--muted)}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.field{display:flex;flex-direction:column;gap:5px}.field label{font-size:.88rem;font-weight:700}.full{grid-column:1/-1}.field input,.field select{width:100%}.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.contact{border:1px solid var(--line);border-radius:13px;padding:13px;overflow-wrap:anywhere}.contact a{color:var(--green);font-weight:700}.adminbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.admin-item{border-top:1px solid var(--line);padding:10px 0;display:flex;justify-content:space-between;gap:8px;align-items:center}.danger{color:#a32929;border-color:#e5baba}.status{min-height:22px;color:var(--green);font-size:.9rem;font-weight:700}.hide{display:none!important}footer{text-align:center;color:var(--muted);padding:25px}.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;background:#174b3c;color:white;padding:10px 16px;border-radius:12px;transition:.2s;pointer-events:none}.toast.show{opacity:1;transform:translate(-50%,0)}
-@media(max-width:650px){.cards,.contactgrid,.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.row{flex-direction:column}.row>*{width:100%}.panel{padding:15px}.nav{align-items:flex-start}.brand{font-size:1rem}}
+.nav,main{max-width:1080px;margin:auto}.nav{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:1.2rem}
+.brand-sub{display:block;font-size:.62rem;letter-spacing:.18em;font-weight:800;color:#426456;line-height:1.1}
+.logo{width:42px;height:42px;border-radius:14px;background:#fff9e7;display:grid;place-items:center;font-size:23px;border:1px solid #fff}
+select,input,button,textarea{font:inherit;border-radius:11px;padding:11px 13px;border:1px solid var(--line)}
+select,input,textarea{background:#fffdf8;color:var(--ink);max-width:100%}
+button{cursor:pointer;font-weight:700;background:#fff;color:var(--green)}
+button:disabled{opacity:.45;cursor:not-allowed}
+.lang{background:#fff9e7;border-color:#fff}.wrap{padding:18px}
+.hero{text-align:center;padding:36px 8px 22px}
+.pill{display:inline-block;background:#fff0bf;border:1px solid #ecd17b;border-radius:30px;padding:5px 13px;font-size:.83rem;font-weight:700;color:#76570d}
+h1{font-size:clamp(2rem,5vw,3.25rem);line-height:1.15;margin:15px 0 8px;color:#174b3c}
+.hero p,.muted{color:var(--muted)}
+.panel{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:20px;margin:17px 0;box-shadow:0 10px 26px #8c6b1710}
+.featured{background:linear-gradient(135deg,#fff9e5,#fff);border:2px solid var(--gold)}
+h2{font-size:1.25rem;margin:0;color:#174b3c}
+.sub{color:var(--muted);font-size:.9rem;margin:3px 0 13px}
+.head{display:flex;gap:11px;align-items:center;margin-bottom:12px}
+.num{background:var(--gold);color:#253a2e;border-radius:11px;width:35px;height:35px;display:grid;place-items:center;font-weight:900}
+.row{display:flex;gap:9px;align-items:center;flex-wrap:wrap}
+.row input{flex:1;min-width:0}
+.primary{background:var(--green);color:white;border-color:var(--green)}
+.gold{background:var(--gold);color:#20382e;border-color:var(--gold)}
+.note{background:#fff8df;border:1px solid #eddaa0;border-radius:11px;padding:10px;margin-top:12px;font-size:.86rem}
+.section{margin:28px 0 12px}
+.section p{margin:3px 0;color:var(--muted);font-size:.9rem}
+.search{width:100%;margin:10px 0 14px}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.card{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px}
+.tag{display:inline-block;background:#fff1c7;color:#795b0d;padding:3px 9px;border-radius:20px;font-size:.76rem;font-weight:bold}
+.card h3{margin:8px 0;color:#174b3c}
+.code{background:#f7f5eb;border:1px dashed #dfcc8e;border-radius:9px;padding:10px;direction:ltr;text-align:left;overflow-wrap:anywhere;font:700 1rem monospace}
+.bottom{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:10px}
+.small{font-size:.8rem;color:var(--muted)}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field label{font-size:.88rem;font-weight:700}
+.full{grid-column:1/-1}
+.field input,.field select,.field textarea{width:100%}
+.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.contact{border:1px solid var(--line);border-radius:13px;padding:13px;overflow-wrap:anywhere}
+.contact a{color:var(--green);font-weight:700}
+.admin-item{border-top:1px solid var(--line);padding:10px 0;display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.danger{color:#a32929;border-color:#e5baba}
+.status{min-height:22px;color:var(--green);font-size:.9rem;font-weight:700}
+.hide{display:none!important}
+footer{text-align:center;color:var(--muted);padding:28px 15px 105px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translate(-50%,20px);opacity:0;background:#174b3c;color:white;padding:10px 16px;border-radius:12px;transition:.2s;pointer-events:none;z-index:100}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.stats-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:8px 0 24px}
+.stat-tile{background:linear-gradient(145deg,#fff,#fff8e5);border:1px solid #ead79d;border-radius:16px;padding:15px;text-align:center}
+.stat-tile b{display:block;font-size:clamp(1.4rem,4vw,2rem);color:#08745b;line-height:1.2}
+.stat-tile span{font-size:.82rem;color:#68746c;font-weight:700}
+.whatsapp-dock{position:fixed;z-index:30;right:20px;bottom:20px}
+.whatsapp-dock a{width:62px;height:62px;display:grid;place-items:center;text-decoration:none;background:#25D366;border-radius:50%;box-shadow:0 8px 24px #07583b55;border:2px solid #fff}
+.whatsapp-dock a:hover{transform:scale(1.08)}
+.whatsapp-dock svg{width:38px;height:38px}
+.wa-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+/* د ټولګې (tabs) */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0;border-bottom:2px solid var(--line);padding-bottom:0}
+.tab{padding:10px 16px;border:1px solid var(--line);border-bottom:none;border-radius:12px 12px 0 0;background:#fff8e5;color:#5a4a1a;font-weight:700;cursor:pointer}
+.tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+/* د ویزې کارتونه */
+.visa-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px}
+.visa-card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:12px;padding:14px}
+.visa-card b{display:block;margin-bottom:4px;color:#174b3c}
+.visa-card a{display:inline-block;margin-top:6px;color:var(--green);font-weight:700;font-size:.9rem}
+/* د اسعارو محاسبه */
+.fx-row{display:grid;grid-template-columns:1fr auto 1fr auto;gap:8px;align-items:end;margin:10px 0}
+.fx-row .field{min-width:0}
+.fx-result{background:#f0faf6;border:1px solid #b9e6d4;border-radius:12px;padding:14px;text-align:center;margin-top:10px}
+.fx-result b{font-size:1.6rem;color:var(--green)}
+.fx-rate{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+@media(max-width:650px){
+  .cards,.contactgrid,.formgrid,.visa-grid{grid-template-columns:1fr}
+  .full{grid-column:auto}
+  .row{flex-direction:column}
+  .row>*{width:100%}
+  .panel{padding:15px}
+  .fx-row{grid-template-columns:1fr}
+  .brand{font-size:1rem}
+  .stats-strip{gap:7px}
+  .stat-tile{padding:12px 5px}
+}
 </style>
 </head>
 <body>
-<header><div class="nav"><div class="brand"><span class="logo">۞</span><span>Nusuk Code Hub</span></div>
-<select id="lang" class="lang" aria-label="Language"><option value="en">English</option><option value="ps">پښتو</option><option value="fa">دری</option><option value="ur">اردو</option></select></div></header>
+<header><div class="nav">
+<div class="brand"><span class="logo">✦</span><span><strong>Woolasyar10</strong><small class="brand-sub">GLOBAL TOOLS HUB</small></span></div>
+<select id="lang" class="lang" aria-label="Language">
+<option value="en">English</option>
+<option value="ps">پښتو</option>
+<option value="fa">دری</option>
+<option value="ur">اردو</option>
+<option value="ar">العربية</option>
+</select>
+</div></header>
+
 <main class="wrap">
-<section class="hero"><span class="pill" data-i="eyebrow">Community code sharing platform</span><h1 data-i="headline">Share useful codes with the world</h1><p data-i="intro">A community-powered collection of referral and travel codes.</p></section>
-<section class="panel featured"><div class="head"><span class="num">★</span><div><h2 data-i="featured">Featured Nusuk code</h2><div class="sub" data-i="featuredSub">The owner's featured code</div></div></div>
-<div class="row"><input id="ownerCode" value="NG-LdD0cQSR" readonly><button class="primary" id="copyOwner" data-i="copy">Copy code</button></div><div class="status" id="ownerStatus"></div><div class="note" data-i="featureNote">Copy the featured code first. Community copy progress is saved on this device only.</div></section>
+<section class="hero">
+<span class="pill" data-i="eyebrow">Global tools & community codes</span>
+<h1 data-i="headline">Your travel & information toolkit</h1>
+<p data-i="intro">Visa check, Kankor results, currency exchange, and community codes — all in one place.</p>
+</section>
+
+<!-- د ټولګې -->
+<div class="tabs" role="tablist">
+<button class="tab active" data-tab="codes" data-i="tabCodes">🎫 Codes</button>
+<button class="tab" data-tab="visa" data-i="tabVisa">🛂 Visa</button>
+<button class="tab" data-tab="kankor" data-i="tabKankor">📚 Kankor</button>
+<button class="tab" data-tab="fx" data-i="tabFx">💱 Currency</button>
+</div>
+
+<!-- ================= د کوډونو برخه ================= -->
+<section id="tab-codes" class="tab-content">
+<section class="stats-strip" aria-label="Community statistics">
+<div class="stat-tile"><b id="publicTotal">0</b><span data-i="statTotal">Codes shared</span></div>
+<div class="stat-tile"><b id="publicActive">0</b><span data-i="statActive">Available now</span></div>
+<div class="stat-tile"><b id="publicCategories">0</b><span data-i="statCategories">Categories</span></div>
+</section>
+
+<section class="panel featured">
+<div class="head"><span class="num">★</span><div><h2 data-i="featured">Featured Nusuk code</h2><div class="sub" data-i="featuredSub">The owner's featured code</div></div></div>
+<div class="row"><input id="ownerCode" value="NG-LdD0cQSR" readonly><button class="primary" id="copyOwner" data-i="copy">Copy code</button></div>
+<div class="status" id="ownerStatus"></div>
+<div class="note" data-i="featureNote">Copy the featured code first. Community copy progress is saved on this device only.</div>
+</section>
+
 <div class="section"><h2 data-i="community">Community codes</h2><p data-i="communitySub">Browse active codes shared by community members.</p></div>
-<input id="search" class="search" type="search" placeholder="Search codes or categories">
-<div id="cards" class="cards"><p class="muted">Connecting to the shared database…</p></div>
-<section class="panel"><div class="head"><span class="num">＋</span><div><h2 data-i="submit">Submit a code</h2><div class="sub" data-i="submitSub">Your submission will be sent to the shared database.</div></div></div>
+<input id="search" class="search" type="search" placeholder="Search codes or categories" data-i-placeholder="searchPh">
+<div id="cards" class="cards"><p class="muted">Connecting…</p></div>
+<div id="pagination" class="row" style="justify-content:center;margin:16px 0">
+<button id="prevPage" type="button" disabled>← Previous</button>
+<span id="pageInfo" class="small" aria-live="polite">Page 1</span>
+<button id="nextPage" type="button" disabled>Next →</button>
+</div>
+
+<section class="panel">
+<div class="head"><span class="num">＋</span><div><h2 data-i="submit">Submit a code</h2><div class="sub" data-i="submitSub">Your submission will be sent to the shared database.</div></div></div>
 <form id="submitForm" class="formgrid">
 <div class="field"><label data-i="codeLabel" for="newCode">Code</label><input id="newCode" required maxlength="180" dir="ltr" placeholder="Enter referral code"></div>
 <div class="field"><label data-i="categoryLabel" for="category">Category</label><select id="category"><option value="nusuk">Nusuk</option><option value="umrah">Umrah</option><option value="travel">Travel</option><option value="discount">Discount</option><option value="other">Other</option></select></div>
 <div class="field full"><label data-i="nameLabel" for="newTitle">Short description (optional)</label><input id="newTitle" maxlength="80" placeholder="e.g. Umrah referral"></div>
 <div class="field full"><button class="gold" type="submit" data-i="submitBtn">Submit code</button><div id="submitStatus" class="status"></div></div>
-</form><p class="small" data-i="moderation">New codes appear publicly immediately. The owner can edit, disable or delete them at any time.</p></section>
-<section class="panel"><div class="head"><span class="num">☎</span><div><h2 data-i="contact">Contact the owner</h2><div class="sub" data-i="contactSub">Questions, corrections or partnership requests</div></div></div>
+</form>
+<p class="small" data-i="moderation">New codes appear publicly immediately. The owner can edit, disable or delete them at any time.</p>
+</section>
+</section>
+
+<!-- ================= د ویزې برخه ================= -->
+<section id="tab-visa" class="tab-content hide">
+<section class="panel">
+<div class="head"><span class="num">🛂</span><div><h2 data-i="visaTitle">Visa status check</h2><div class="sub" data-i="visaSub">Select your destination and open the official portal.</div></div></div>
+<div class="visa-grid">
+<div class="visa-card"><b>🇺🇸 United States — CEAC</b><div class="small">DS-160 confirmation + passport</div><a href="https://ceac.state.gov/CEACStatTracker/Status.aspx" target="_blank" rel="noopener">Open CEAC ↗</a></div>
+<div class="visa-card"><b>🇬🇧 United Kingdom — UKVI / VFS</b><div class="small">Visa application reference number</div><a href="https://www.vfsglobal.com/" target="_blank" rel="noopener">Open VFS ↗</a></div>
+<div class="visa-card"><b>🇨🇦 Canada — IRCC</b><div class="small">GCKey account required</div><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-status.html" target="_blank" rel="noopener">Open IRCC ↗</a></div>
+<div class="visa-card"><b>🇦🇺 Australia — ImmiAccount</b><div class="small">ImmiAccount login</div><a href="https://immi.homeaffairs.gov.au/" target="_blank" rel="noopener">Open ImmiAccount ↗</a></div>
+<div class="visa-card"><b>🇪🇺 Schengen — VFS/TLS/BLS</b><div class="small">Depends on the consulate that received your file</div><a href="https://www.schengenvisainfo.com/" target="_blank" rel="noopener">Schengen info ↗</a></div>
+<div class="visa-card"><b>🇰🇷 South Korea — Visa Portal</b><div class="small">Passport + English name + DOB</div><a href="https://www.visa.go.kr/" target="_blank" rel="noopener">Open Visa Portal ↗</a></div>
+<div class="visa-card"><b>🇵🇰 Pakistan — NADRA</b><div class="small">Visa authenticity verification</div><a href="https://visa.nadra.gov.pk/" target="_blank" rel="noopener">Open NADRA ↗</a></div>
+<div class="visa-card"><b>🇦🇪 UAE — ICP / GDRFA</b><div class="small">Abu Dhabi/northern emirates use ICP; Dubai uses GDRFA</div><a href="https://icp.gov.ae/" target="_blank" rel="noopener">Open ICP ↗</a></div>
+<div class="visa-card"><b>🇸🇦 Saudi Arabia — Nusuk / Tawakkalna</b><div class="small">Umrah visa + Nusuk permit</div><a href="https://www.nusuk.sa/" target="_blank" rel="noopener">Open Nusuk ↗</a></div>
+<div class="visa-card"><b>🇹🇷 Türkiye — e-Visa</b><div class="small">e-Visa status check</div><a href="https://www.evisa.gov.tr/" target="_blank" rel="noopener">Open e-Visa ↗</a></div>
+</div>
+<div class="note" data-i="visaNote">⚠️ This page only links to official government portals. We do not copy or store visa data. Always verify on the official site.</div>
+</section>
+</section>
+
+<!-- ================= د کانکور برخه ================= -->
+<section id="tab-kankor" class="tab-content hide">
+<section class="panel">
+<div class="head"><span class="num">📚</span><div><h2 data-i="kankorTitle">Kankor results</h2><div class="sub" data-i="kankorSub">Official results are published only by Nexa (Afghanistan).</div></div></div>
+<div class="visa-grid">
+<div class="visa-card"><b>🇦🇫 Nexa — Official results</b><div class="small">General Kankor, special Kankor, third-round results, complaints</div><a href="https://nexa.gov.af/" target="_blank" rel="noopener">Open Nexa ↗</a></div>
+<div class="visa-card"><b>🇦🇫 Nexa — Result lookup</b><div class="small">Enter your exam ID to search results</div><a href="https://nexa.gov.af/result" target="_blank" rel="noopener">Open result lookup ↗</a></div>
+<div class="visa-card"><b>🇦🇫 MoHE — Higher education</b><div class="small">University admission and placement</div><a href="https://mohe.gov.af/" target="_blank" rel="noopener">Open MoHE ↗</a></div>
+</div>
+
+<div class="note" data-i="kankorNote">📌 Tip: Save the Nexa link to your home screen and check it right after results are announced. We do not copy or store result data.</div>
+</section>
+</section>
+
+<!-- ================= د اسعارو برخه ================= -->
+<section id="tab-fx" class="tab-content hide">
+<section class="panel">
+<div class="head"><span class="num">💱</span><div><h2 data-i="fxTitle">Currency converter</h2><div class="sub" data-i="fxSub">Live exchange rates — auto-updated.</div></div></div>
+<div class="fx-row">
+<div class="field"><label data-i="fxAmount">Amount</label><input id="fxAmount" type="number" value="100" min="0" step="any"></div>
+<div class="field"><label data-i="fxFrom">From</label><select id="fxFrom"></select></div>
+<div class="field"><label data-i="fxTo">To</label><select id="fxTo"></select></div>
+<button class="primary" id="fxSwap" type="button" title="Swap">⇄</button>
+</div>
+<div class="fx-result">
+  <b id="fxResult">—</b>
+  <div class="fx-rate" id="fxRate"></div>
+</div>
+<div class="fx-row" style="margin-top:18px">
+<button class="gold" id="fxRefresh" type="button" data-i="fxRefresh">Refresh rates</button>
+</div>
+<div class="note" data-i="fxNote">Rates are provided by a third-party API and refreshed automatically. Not financial advice.</div>
+</section>
+</section>
+
+<!-- ================= د اړیکې او اډمین برخه ================= -->
+<section class="panel">
+<div class="head"><span class="num">☎</span><div><h2 data-i="contact">Contact the owner</h2><div class="sub" data-i="contactSub">Questions, corrections or partnership requests</div></div></div>
 <div class="contactgrid">
 <div class="contact">✉️ <b>Gmail</b><br><a href="mailto:mshahwoolasyar@gmail.com">mshahwoolasyar@gmail.com</a></div>
 <div class="contact">📱 <b data-i="phone">Phone</b><br><a href="tel:+93764848687">+93 764 84 86 87</a></div>
 <div class="contact">💬 <b>WhatsApp</b><br><a href="https://wa.me/93764848687" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div>
-</div></section>
-<section class="panel"><div class="head"><span class="num">⚙</span><div><h2 data-i="admin">Owner administration</h2><div class="sub" data-i="adminSub">Sign in to review submissions and manage published codes.</div></div></div>
-<div id="loginBox"><form id="loginForm" class="formgrid"><div class="field"><label for="adminEmail">Email</label><input id="adminEmail" type="email" value="mshahwoolasyar@gmail.com" required></div><div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" required autocomplete="current-password"></div><div class="field full"><button class="primary" type="submit" data-i="login">Owner sign in</button><div id="loginStatus" class="status"></div></div></form></div>
-<div id="adminBox" class="hide"><div class="adminbar"><b id="adminIdentity"></b><button id="refreshAdmin">Refresh</button><button id="logout">Sign out</button></div><div class="contactgrid" id="adminStats"><div class="contact">Total codes: <b id="totalCount">0</b></div><div class="contact">Active: <b id="activeCount">0</b></div><div class="contact">Disabled: <b id="disabledCount">0</b></div></div><h3>Published codes</h3><div id="manageList"></div><h3>Disabled codes</h3><div id="pendingList"></div></div>
-<p class="small" data-i="adminNote">New submissions publish automatically. Only the owner account configured in the database can disable, edit or delete codes. Never share your password or secret key.</p>
+</div>
 </section>
-</main><footer>© <span id="year"></span> Nusuk Code Hub · Community platform, not an official Nusuk service</footer><div id="toast" class="toast"></div>
+
+<section class="panel">
+<div class="head"><span class="num">⚙</span><div><h2 data-i="admin">Owner administration</h2><div class="sub" data-i="adminSub">Sign in to review submissions and manage published codes.</div></div></div>
+<div id="loginBox"><form id="loginForm" class="formgrid">
+<div class="field"><label for="adminEmail">Email</label><input id="adminEmail" type="email" value="mshahwoolasyar@gmail.com" required></div>
+<div class="field"><label for="adminPassword">Password</label><input id="adminPassword" type="password" required autocomplete="current-password"></div>
+<div class="field full"><button class="primary" type="submit" data-i="login">Owner sign in</button><div id="loginStatus" class="status"></div></div>
+</form></div>
+<div id="adminBox" class="hide">
+<div class="row" style="margin-bottom:12px"><b id="adminIdentity"></b><button id="refreshAdmin">Refresh</button><button id="logout">Sign out</button></div>
+<div class="contactgrid" id="adminStats">
+<div class="contact">Total codes: <b id="totalCount">0</b></div>
+<div class="contact">Active: <b id="activeCount">0</b></div>
+<div class="contact">Disabled: <b id="disabledCount">0</b></div>
+</div>
+<h3>Published codes</h3><div id="manageList"></div>
+<h3>Disabled codes</h3><div id="pendingList"></div>
+</div>
+</section>
+</main>
+
+<footer><strong>Woolasyar10</strong> · <span data-i="footerTag">Global Tools Hub</span><br>© <span id="year"></span> · <span data-i="disclaimer">Independent platform, not affiliated with any government.</span></footer>
+
+<div class="whatsapp-dock"><a href="https://wa.me/93764848687" target="_blank" rel="noopener" aria-label="WhatsApp">
+<svg viewBox="0 0 32 32"><path fill="#fff" d="M16.02 3.2A12.63 12.63 0 0 0 5.2 22.35L3.55 28.4l6.2-1.63A12.62 12.62 0 1 0 16.02 3.2Zm5.67 15.23c-.31-.16-1.84-.91-2.13-1.02-.29-.1-.5-.16-.71.16-.21.31-.82 1.02-1 1.23-.19.21-.37.23-.68.08-.31-.16-1.31-.48-2.49-1.53-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.48.14-.64.14-.14.31-.37.47-.55.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.71-1.7-.97-2.33-.25-.61-.51-.53-.71-.54h-.6c-.21 0-.55.08-.84.39-.29.31-1.1 1.07-1.1 2.61s1.13 3.03 1.29 3.24c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.8.66.76.24 1.45.2 1.99.12.61-.09 1.84-.75 2.1-1.48.26-.73.26-1.36.18-1.49-.08-.13-.29-.21-.6-.37Z"/></svg>
+</a></div>
+<div id="toast" class="toast"></div>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const SUPABASE_URL="https://ouniftavtctyzebycbjj.supabase.co";
@@ -56,38 +259,309 @@ const OWNER_EMAIL="mshahwoolasyar@gmail.com";
 const FEATURED="NG-LdD0cQSR";
 const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
 const $=id=>document.getElementById(id);
+
+/* د ژباړې آبجیکټ */
 const words={
-en:{eyebrow:"Community code sharing platform",headline:"Share useful codes with the world",intro:"A community-powered collection of referral and travel codes.",featured:"Featured Nusuk code",featuredSub:"The owner's featured code",copy:"Copy code",featureNote:"Copy the featured code first. Community copy progress is saved on this device only.",community:"Community codes",communitySub:"Browse active codes shared by community members.",submit:"Submit a code",submitSub:"Your submission will be sent to the shared database.",codeLabel:"Code",categoryLabel:"Category",nameLabel:"Short description (optional)",submitBtn:"Submit code",moderation:"New codes appear publicly immediately. The owner can edit, disable or delete them at any time.",contact:"Contact the owner",contactSub:"Questions, corrections or partnership requests",phone:"Phone",admin:"Owner administration",adminSub:"Sign in to review submissions and manage published codes.",login:"Owner sign in",adminNote:"New submissions publish automatically. Only the owner account configured in the database can disable, edit or delete codes. Never share your password or secret key."},
-ps:{eyebrow:"د کوډونو د شریکولو نړیواله ټولنه",headline:"ګټور کوډونه له نړۍ سره شریک کړئ",intro:"د نسک، عمرې، سفر او تخفیف کوډونو ګډ مرکز.",featured:"ځانګړی د نسک کوډ",featuredSub:"د وېب‌پاڼې د مالک ځانګړی کوډ",copy:"کوډ کاپي کړه",featureNote:"لومړی ځانګړی کوډ کاپي کړه. د کاپي پرمختګ یوازې په همدې وسیله کې ساتل کېږي.",community:"د ټولنې کوډونه",communitySub:"د خلکو شریک کړي فعال کوډونه وګوره.",submit:"نوی کوډ وسپاره",submitSub:"ستا کوډ به مرکزي ډیټابېس ته واستول شي.",codeLabel:"کوډ",categoryLabel:"کټګوري",nameLabel:"لنډ وضاحت (اختیاري)",submitBtn:"کوډ وسپاره",moderation:"نوي کوډونه سمدستي خپرېږي؛ مالک یې هر وخت بدلولای، بندولای یا حذفولای شي.",contact:"له مالک سره اړیکه",contactSub:"پوښتنې، سمونونه یا وړاندیزونه",phone:"شمېره",admin:"د مالک مدیریت",adminSub:"د سپارل شویو کوډونو کتنه او مدیریت.",login:"د مالک ننوتل",adminNote:"یوازې د ډیټابېس له خوا ټاکل شوی مالک کوډونه تایید، بند، بدل یا حذف کولای شي. پاسورډ او پټ کیلي مه شریکوه."},
-fa:{eyebrow:"مرکز جهانی اشتراک کدها",headline:"کدهای مفید را با جهان شریک کنید",intro:"مجموعه‌ای از کدهای نسک، عمره، سفر و تخفیف.",featured:"کد ویژه نسک",featuredSub:"کد ویژه مالک وب‌سایت",copy:"کاپی کد",featureNote:"ابتدا کد ویژه را کاپی کنید. پیشرفت کاپی فقط در همین دستگاه ذخیره می‌شود.",community:"کدهای جامعه",communitySub:"کدهای فعال به اشتراک گذاشته‌شده را ببینید.",submit:"ثبت کد",submitSub:"کد شما به دیتابیس مرکزی فرستاده می‌شود.",codeLabel:"کد",categoryLabel:"دسته‌بندی",nameLabel:"توضیح کوتاه (اختیاری)",submitBtn:"ثبت کد",moderation:"کدهای تازه فوراً منتشر می‌شوند؛ مالک هر زمان می‌تواند آن‌ها را ویرایش، غیرفعال یا حذف کند.",contact:"تماس با مالک",contactSub:"پرسش، اصلاح یا پیشنهاد",phone:"شماره",admin:"مدیریت مالک",adminSub:"بازبینی و مدیریت کدها.",login:"ورود مالک",adminNote:"فقط حساب مالک تعیین‌شده در دیتابیس اجازه مدیریت دارد. رمز و کلید محرمانه را شریک نسازید."},
-ur:{eyebrow:"عالمی کوڈ شیئرنگ پلیٹ فارم",headline:"مفید کوڈز دنیا کے ساتھ شیئر کریں",intro:"نسک، عمرہ، سفر اور ڈسکاؤنٹ کوڈز کا مشترکہ مرکز۔",featured:"نمایاں نسک کوڈ",featuredSub:"ویب سائٹ کے مالک کا کوڈ",copy:"کوڈ کاپی کریں",featureNote:"پہلے نمایاں کوڈ کاپی کریں۔ کاپی کی پیش رفت صرف اسی ڈیوائس میں محفوظ ہوگی۔",community:"کمیونٹی کوڈز",communitySub:"لوگوں کے شیئر کردہ فعال کوڈز دیکھیں۔",submit:"کوڈ جمع کریں",submitSub:"آپ کا کوڈ مرکزی ڈیٹابیس میں بھیجا جائے گا۔",codeLabel:"کوڈ",categoryLabel:"قسم",nameLabel:"مختصر وضاحت (اختیاری)",submitBtn:"کوڈ جمع کریں",moderation:"نئے کوڈز مالک کی منظوری تک عوام کو نظر نہیں آئیں گے۔",contact:"مالک سے رابطہ",contactSub:"سوال، درستگی یا تجاویز",phone:"فون",admin:"مالک کا انتظام",adminSub:"جمع شدہ کوڈز کا جائزہ اور انتظام۔",login:"مالک لاگ اِن",adminNote:"صرف ڈیٹابیس میں مقرر مالک ہی کوڈز منظور، بند، تبدیل یا حذف کر سکتا ہے۔ پاس ورڈ یا خفیہ کلید شیئر نہ کریں."}
+en:{tabCodes:"🎫 Codes",tabVisa:"🛂 Visa",tabKankor:"📚 Kankor",tabFx:"💱 Currency",searchPh:"Search codes or categories",
+visaTitle:"Visa status check",visaSub:"Select your destination and open the official portal.",visaNote:"This page only links to official portals. We do not store visa data.",
+kankorTitle:"Kankor results",kankorSub:"Official results are published only by Nexa.",kankorNote:"We do not copy or store result data.",
+fxTitle:"Currency converter",fxSub:"Live exchange rates — auto-updated.",fxAmount:"Amount",fxFrom:"From",fxTo:"To",fxRefresh:"Refresh rates",fxNote:"Rates from a third-party API. Not financial advice.",
+shareSite:"Share Woolasyar10",statTotal:"Codes shared",statActive:"Available now",statCategories:"Categories",footerTag:"Global Tools Hub",disclaimer:"Independent platform, not affiliated with any government.",
+eyebrow:"Global tools & community codes",headline:"Your travel & information toolkit",intro:"Visa check, Kankor results, currency exchange, and community codes.",
+featured:"Featured Nusuk code",featuredSub:"The owner's featured code",copy:"Copy code",featureNote:"Copy the featured code first.",
+community:"Community codes",communitySub:"Browse active codes shared by community members.",
+submit:"Submit a code",submitSub:"Your submission will be sent to the shared database.",codeLabel:"Code",categoryLabel:"Category",nameLabel:"Short description (optional)",submitBtn:"Submit code",moderation:"New codes appear publicly immediately.",
+contact:"Contact the owner",contactSub:"Questions, corrections or partnership requests",phone:"Phone",
+admin:"Owner administration",adminSub:"Sign in to manage published codes.",login:"Owner sign in",adminNote:"Only the owner can edit, disable or delete codes."},
+ps:{tabCodes:"🎫 کوډونه",tabVisa:"🛂 ویزه",tabKankor:"📚 کانکور",tabFx:"💱 اسعار",searchPh:"کوډ یا کټګوري ولټوه",
+visaTitle:"د ویزې حالت تفتیش",visaSub:"خپل ځای وټاکئ او رسمي پورتال ته لاړ شئ.",visaNote:"دا پاڼه یوازې رسمي پورتالونو ته لینک ورکوي. موږ د ویزې معلومات نه ذخیره کوو.",
+kankorTitle:"د کانکور پایلې",kankorSub:"رسمي پایلې یوازې Nexa خپروي.",kankorNote:"موږ د پایلو معلومات نه کاپي کوو.",
+fxTitle:"د اسعارو محاسبه",fxSub:"ژوندي تبادلې نرخونه — اتوماتیک تازه کیږي.",fxAmount:"اندازه",fxFrom:"له",fxTo:"ته",fxRefresh:"نرخونه تازه کړه",fxNote:"نرخونه د دریمې خوا API څخه دي. مالي مشوره نه ده.",
+shareSite:"Woolasyar10 شریک کړه",statTotal:"ټول کوډونه",statActive:"اوسني فعال",statCategories:"کټګورۍ",footerTag:"نړیوال د وسایلو مرکز",disclaimer:"خپلواکه پاڼه؛ له کوم حکومت سره تړاو نه لري.",
+eyebrow:"نړیوال وسایل او د ټولنې کوډونه",headline:"ستاسو د سفر او معلوماتو وسیله",intro:"ویزه، کانکور، اسعار او د ټولنې کوډونه — ټول یو ځای.",
+featured:"ځانګړی د نسک کوډ",featuredSub:"د مالک ځانګړی کوډ",copy:"کوډ کاپي کړه",featureNote:"لومړی ځانګړی کوډ کاپي کړه.",
+community:"د ټولنې کوډونه",communitySub:"د خلکو شریک کړي فعال کوډونه وګوره.",
+submit:"نوی کوډ وسپاره",submitSub:"ستا کوډ به مرکزي ډیټابېس ته واستول شي.",codeLabel:"کوډ",categoryLabel:"کټګوري",nameLabel:"لنډ وضاحت (اختیاري)",submitBtn:"کوډ وسپاره",moderation:"نوي کوډونه سمدستي خپرېږي.",
+contact:"له مالک سره اړیکه",contactSub:"پوښتنې، سمونونه یا وړاندیزونه",phone:"شمېره",
+admin:"د مالک مدیریت",adminSub:"د کوډونو مدیریت.",login:"د مالک ننوتل",adminNote:"یوازې مالک کوډونه بدلولای یا حذفولای شي."},
+fa:{tabCodes:"🎫 کدها",tabVisa:"🛂 ویزا",tabKankor:"📚 کانکور",tabFx:"💱 اسعار",searchPh:"جستجوی کد یا دسته",
+visaTitle:"بررسی وضعیت ویزا",visaSub:"مقصد خود را انتخاب کنید و به پورتال رسمی بروید.",visaNote:"این صفحه فقط به پورتال‌های رسمی لینک می‌دهد.",
+kankorTitle:"نتایج کانکور",kankorSub:"نتایج رسمی فقط توسط Nexa منتشر می‌شود.",kankorNote:"ما داده‌های نتایج را ذخیره نمی‌کنیم.",
+fxTitle:"تبدیل اسعار",fxSub:"نرخ‌های زنده — به‌روزرسانی خودکار.",fxAmount:"مقدار",fxFrom:"از",fxTo:"به",fxRefresh:"تازه‌سازی نرخ‌ها",fxNote:"نرخ‌ها از API شخص ثالث است.",
+shareSite:"Woolasyar10 را شریک کنید",statTotal:"کدهای شریک‌شده",statActive:"فعال",statCategories:"دسته‌ها",footerTag:"مرکز جهانی ابزارها",disclaimer:"پلتفرم مستقل؛ وابسته به هیچ دولتی نیست.",
+eyebrow:"ابزارهای جهانی و کدهای جامعه",headline:"جعبه ابزار سفر و اطلاعات شما",intro:"ویزا، کانکور، اسعار و کدهای جامعه — همه در یک جا.",
+featured:"کد ویژه نسک",featuredSub:"کد ویژه مالک",copy:"کاپی کد",featureNote:"ابتدا کد ویژه را کاپی کنید.",
+community:"کدهای جامعه",communitySub:"کدهای فعال را ببینید.",
+submit:"ثبت کد",submitSub:"کد شما به دیتابیس مرکزی فرستاده می‌شود.",codeLabel:"کد",categoryLabel:"دسته",nameLabel:"توضیح کوتاه (اختیاری)",submitBtn:"ثبت کد",moderation:"کدهای تازه فوراً منتشر می‌شوند.",
+contact:"تماس با مالک",contactSub:"پرسش، اصلاح یا پیشنهاد",phone:"شماره",
+admin:"مدیریت مالک",adminSub:"مدیریت کدها.",login:"ورود مالک",adminNote:"فقط مالک می‌تواند کدها را مدیریت کند."},
+ur:{tabCodes:"🎫 کوڈز",tabVisa:"🛂 ویزا",tabKankor:"📚 کانکور",tabFx:"💱 اسعار",searchPh:"کوڈ یا قسم تلاش کریں",
+visaTitle:"ویزا اسٹیٹس چیک",visaSub:"اپنی منزل منتخب کریں اور سرکاری پورٹل کھولیں۔",visaNote:"یہ صفحہ صرف سرکاری پورٹلز کے لنک دیتا ہے۔",
+kankorTitle:"کانکور نتائج",kankorSub:"سرکاری نتائج صرف Nexa شائع کرتا ہے۔",kankorNote:"ہم نتائج کا ڈیٹا محفوظ نہیں کرتے۔",
+fxTitle:"کرنسی کنورٹر",fxSub:"لائیو شرح مبادلہ — خودکار اپڈیٹ۔",fxAmount:"رقم",fxFrom:"سے",fxTo:"تک",fxRefresh:"شرح تازہ کریں",fxNote:"شرح تیسرے فریق API سے ہے۔",
+shareSite:"Woolasyar10 شیئر کریں",statTotal:"کوڈز",statActive:"فعال",statCategories:"اقسام",footerTag:"عالمی ٹولز مرکز",disclaimer:"آزاد پلیٹ فارم؛ کسی حکومت سے وابستہ نہیں۔",
+eyebrow:"عالمی ٹولز اور کمیونٹی کوڈز",headline:"آپ کا سفر اور معلوماتی ٹول کٹ",intro:"ویزا، کانکور، اسعار اور کمیونٹی کوڈز — سب ایک جگہ۔",
+featured:"نمایاں نسک کوڈ",featuredSub:"مالک کا کوڈ",copy:"کوڈ کاپی",featureNote:"پہلے نمایاں کوڈ کاپی کریں۔",
+community:"کمیونٹی کوڈز",communitySub:"فعال کوڈز دیکھیں۔",
+submit:"کوڈ جمع کریں",submitSub:"آپ کا کوڈ مرکزی ڈیٹابیس میں جائے گا۔",codeLabel:"کوڈ",categoryLabel:"قسم",nameLabel:"مختصر وضاحت",submitBtn:"کوڈ جمع کریں",moderation:"نئے کوڈز فوراً شائع ہوتے ہیں۔",
+contact:"مالک سے رابطہ",contactSub:"سوالات یا تجاویز",phone:"فون",
+admin:"مالک کا انتظام",adminSub:"کوڈز کا انتظام۔",login:"مالک لاگ اِن",adminNote:"صرف مالک کوڈز تبدیل کر سکتا ہے۔"},
+ar:{tabCodes:"🎫 الأكواد",tabVisa:"🛂 التأشيرة",tabKankor:"📚 كانكور",tabFx:"💱 العملات",searchPh:"ابحث عن كود أو فئة",
+visaTitle:"التحقق من حالة التأشيرة",visaSub:"اختر وجهتك وافتح البوابة الرسمية.",visaNote:"هذه الصفحة توفر روابط رسمية فقط.",
+kankorTitle:"نتائج كانكور",kankorSub:"النتائج الرسمية تنشرها Nexa فقط.",kankorNote:"نحن لا نخزن بيانات النتائج.",
+fxTitle:"محول العملات",fxSub:"أسعار حية — تحديث تلقائي.",fxAmount:"المبلغ",fxFrom:"من",fxTo:"إلى",fxRefresh:"تحديث الأسعار",fxNote:"الأسعار من واجهة برمجة طرف ثالث.",
+shareSite:"شارك Woolasyar10",statTotal:"الأكواد",statActive:"متاح",statCategories:"الفئات",footerTag:"مركز الأدوات العالمي",disclaimer:"منصة مستقلة؛ غير تابعة لأي حكومة.",
+eyebrow:"أدوات عالمية وأكواد المجتمع",headline:"صندوق أدوات السفر والمعلومات",intro:"التأشيرة، كانكور، العملات وأكواد المجتمع — كلها في مكان واحد.",
+featured:"كود نسك المميز",featuredSub:"كود المالك المميز",copy:"نسخ الكود",featureNote:"انسخ الكود المميز أولاً.",
+community:"أكواد المجتمع",communitySub:"تصفح الأكواد النشطة.",
+submit:"إرسال كود",submitSub:"سيتم إرسال كودك إلى قاعدة البيانات.",codeLabel:"الكود",categoryLabel:"الفئة",nameLabel:"وصف قصير (اختياري)",submitBtn:"إرسال الكود",moderation:"تظهر الأكواد الجديدة فوراً.",
+contact:"تواصل مع المالك",contactSub:"أسئلة أو اقتراحات",phone:"الهاتف",
+admin:"إدارة المالك",adminSub:"إدارة الأكواد.",login:"دخول المالك",adminNote:"فقط المالك يمكنه إدارة الأكواد."}
 };
-let lang="en", rows=[],session=null;
-function setLang(){lang=$("lang").value;document.documentElement.lang=lang;document.documentElement.dir=["ps","fa","ur"].includes(lang)?"rtl":"ltr";document.querySelectorAll("[data-i]").forEach(e=>e.textContent=words[lang][e.dataset.i]||words.en[e.dataset.i]||e.dataset.i)}
+
+let lang="en", rows=[], session=null, page=0, pageSize=20, totalMatching=0;
+let fxRates={}, fxBase="USD";
+
+/* ================= د ژبې بدلون ================= */
+function setLang(){
+  lang=$("lang").value;
+  localStorage.setItem("wool_lang",lang);
+  const isRTL=["ps","fa","ur","ar"].includes(lang);
+  document.documentElement.lang=lang;
+  document.documentElement.dir=isRTL?"rtl":"ltr";
+  document.querySelectorAll("[data-i]").forEach(e=>{
+    const k=e.dataset.i; e.textContent=words[lang][k]||words.en[k]||k;
+  });
+  document.querySelectorAll("[data-i-placeholder]").forEach(e=>{
+    const k=e.dataset.iPlaceholder; e.placeholder=words[lang][k]||words.en[k]||"";
+  });
+  // د تیر/بل تڼۍ RTL
+  $("prevPage").textContent = isRTL ? "→ Previous" : "← Previous";
+  $("nextPage").textContent = isRTL ? "Next ←" : "Next →";
+  // د اسعارو لیبلونه
+  const fromL=$("fxFrom"), toL=$("fxTo");
+  if(fromL.options.length){ populateCurrencySelects(); }
+  updateFxResult();
+}
+
+/* ================= د ټولګو مدیریت ================= */
+document.querySelectorAll(".tab").forEach(t=>{
+  t.onclick=()=>{
+    document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+    document.querySelectorAll(".tab-content").forEach(x=>x.classList.add("hide"));
+    t.classList.add("active");
+    $("tab-"+t.dataset.tab).classList.remove("hide");
+    if(t.dataset.tab==="fx" && !Object.keys(fxRates).length) loadFxRates();
+  };
+});
+
 function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2200)}
-async function copyText(s){try{await navigator.clipboard.writeText(s)}catch{const t=document.createElement("textarea");t.value=s;document.body.append(t);t.select();document.execCommand("copy");t.remove()}toast(words[lang].copy+" ✓")}
-$("lang").onchange=setLang;
-$("copyOwner").onclick=async()=>{await copyText(FEATURED);localStorage.setItem("nch_featured_copied","1");$("ownerStatus").textContent="✓";};
-async function loadCodes(){const {data,error}=await db.from("nusuk_codes").select("id,code,category,title,is_active,created_at").eq("is_active",true).order("created_at",{ascending:false});if(error){$("cards").innerHTML='<p class="muted">Could not load codes. Please check the database setup.</p>';console.error(error);return}rows=data||[];draw()}
-function draw(){const q=$("search").value.toLowerCase().trim();const box=$("cards");box.innerHTML="";const used=JSON.parse(localStorage.getItem("nch_used_codes")||"[]");const filtered=rows.filter(r=>!used.includes(String(r.id))&&[r.code,r.category,r.title||""].join(" ").toLowerCase().includes(q));if(!filtered.length){box.innerHTML='<p class="muted">No active codes found yet.</p>';return}filtered.forEach(r=>{const card=document.createElement("article");card.className="card";const tag=document.createElement("span");tag.className="tag";tag.textContent=r.category;const h=document.createElement("h3");h.textContent=r.title||"Community code";const val=document.createElement("div");val.className="code";val.textContent=r.code;const b=document.createElement("div");b.className="bottom";const status=document.createElement("span");status.className="small";status.textContent="Active";const btn=document.createElement("button");btn.textContent="📋 "+words[lang].copy;btn.onclick=async()=>{await copyText(r.code);const used=JSON.parse(localStorage.getItem("nch_used_codes")||"[]");if(!used.includes(String(r.id)))used.push(String(r.id));localStorage.setItem("nch_used_codes",JSON.stringify(used));draw()};b.append(status,btn);card.append(tag,h,val,b);box.append(card)})}
-$("search").oninput=draw;
-$("submitForm").onsubmit=async e=>{e.preventDefault();$("submitStatus").textContent="Sending…";const payload={p_code:$("newCode").value.trim(),p_category:$("category").value,p_title:$("newTitle").value.trim()||null};const {error}=await db.rpc("submit_nusuk_code",payload);if(error){$("submitStatus").textContent=error.message.includes("duplicate")?"This code has already been submitted.":error.message;return}$("submitForm").reset();$("submitStatus").textContent="Published immediately. Thank you for sharing!";};
-$("loginForm").onsubmit=async e=>{e.preventDefault();$("loginStatus").textContent="Signing in…";const {data,error}=await db.auth.signInWithPassword({email:$("adminEmail").value.trim(),password:$("adminPassword").value});if(error){$("loginStatus").textContent=error.message;return}session=data.session;$("loginStatus").textContent="Signed in. Checking owner permissions…";await refreshAdmin()};
-async function refreshAdmin(){const {data:{user}}=await db.auth.getUser();if(!user){$("adminBox").classList.add("hide");return}if(user.email!==OWNER_EMAIL){$("loginStatus").textContent="This account is not the configured owner.";await db.auth.signOut();return}$("loginBox").classList.add("hide");$("adminBox").classList.remove("hide");$("adminIdentity").textContent=user.email;await loadAdminLists()}
-async function loadAdminLists(){const {data,error}=await db.from("nusuk_codes").select("*").order("created_at",{ascending:false});if(error){$("pendingList").textContent=error.message;return}const all=data||[];const disabled=all.filter(x=>!x.is_active);const active=all.filter(x=>x.is_active);$("totalCount").textContent=all.length;$("activeCount").textContent=active.length;$("disabledCount").textContent=disabled.length;renderAdminGroup("pendingList","",disabled,false);renderAdminGroup("manageList","",active,false)}
-function renderAdminGroup(id,title,list,pending){const box=$(id);box.innerHTML="";if(title){const h=document.createElement("h3");h.textContent=title;box.append(h)}if(!list.length){const p=document.createElement("p");p.className="small";p.textContent="Nothing here.";box.append(p);return}list.forEach(r=>{const item=document.createElement("div");item.className="admin-item";const info=document.createElement("div");info.innerHTML="";const b=document.createElement("b");b.textContent=r.code;const sm=document.createElement("div");sm.className="small";sm.textContent=(r.title||r.category)+" · "+r.category;info.append(b,sm);const actions=document.createElement("div");actions.className="adminbar";if(pending){const approve=document.createElement("button");approve.className="gold";approve.textContent="Approve";approve.onclick=()=>adminUpdate(r.id,{is_active:true});actions.append(approve)}else{const toggle=document.createElement("button");toggle.textContent=r.is_active?"Disable":"Enable";toggle.onclick=()=>adminUpdate(r.id,{is_active:!r.is_active});actions.append(toggle)}const edit=document.createElement("button");edit.textContent="Edit";edit.onclick=()=>adminEdit(r);actions.append(edit);const del=document.createElement("button");del.className="danger";del.textContent="Delete";del.onclick=()=>{if(confirm("Delete this code permanently?"))adminDelete(r.id)};actions.append(del);item.append(info,actions);box.append(item)})}
-async function adminEdit(r){
-  const code=prompt("Edit code:",r.code); if(code===null)return;
-  const title=prompt("Edit short description:",r.title||""); if(title===null)return;
-  const category=prompt("Category (nusuk, umrah, travel, discount, other):",r.category||"other"); if(category===null)return;
-  const cleanCategory=category.trim().toLowerCase();
-  if(!["nusuk","umrah","travel","discount","other"].includes(cleanCategory)){toast("Invalid category");return}
-  if(code.trim().length<3||code.trim().length>180){toast("Code must be 3–180 characters");return}
-  await adminUpdate(r.id,{code:code.trim(),title:title.trim()||null,category:cleanCategory});
+async function copyText(s){
+  try{await navigator.clipboard.writeText(s)}
+  catch{const t=document.createElement("textarea");t.value=s;document.body.append(t);t.select();document.execCommand("copy");t.remove()}
+  toast("Copied ✓");
+}
+
+/* ================= د کوډونو منطق ================= */
+$("copyOwner").onclick=async()=>{await copyText(FEATURED);$("ownerStatus").textContent="✓"};
+
+async function loadCodes(){
+  const q=$("search").value.trim().replace(/[(),]/g,""); // sanitize
+  let query=db.from("nusuk_codes").select("id,code,category,title,is_active,created_at",{count:"exact"}).eq("is_active",true).order("created_at",{ascending:false});
+  if(q) query=query.or(`code.ilike.%${q}%,category.ilike.%${q}%,title.ilike.%${q}%`);
+  const from=page*pageSize, to=from+pageSize-1;
+  const {data,error,count}=await query.range(from,to);
+  if(error){$("cards").innerHTML='<p class="muted">Could not load codes.</p>';console.error(error);return}
+  rows=data||[]; totalMatching=count||0; draw(); updatePublicStats(count||0);
+}
+async function updatePublicStats(activeCount){
+  $("publicTotal").textContent=activeCount;
+  $("publicActive").textContent=activeCount;
+  $("publicCategories").textContent="5";
+}
+function draw(){
+  const box=$("cards");box.innerHTML="";
+  const used=JSON.parse(localStorage.getItem("wool_used")||"[]");
+  const visible=rows.filter(r=>!used.includes(String(r.id)));
+  if(!visible.length){
+    box.innerHTML='<p class="muted">No codes on this page. Try another page or clear copied codes.</p>';
+  } else visible.forEach(r=>{
+    const card=document.createElement("article");card.className="card";
+    const tag=document.createElement("span");tag.className="tag";tag.textContent=r.category;
+    const h=document.createElement("h3");h.textContent=r.title||"Community code";
+    const val=document.createElement("div");val.className="code";val.textContent=r.code;
+    const b=document.createElement("div");b.className="bottom";
+    const status=document.createElement("span");status.className="small";status.textContent="Active";
+    const btn=document.createElement("button");btn.textContent="📋 "+words[lang].copy;
+    btn.onclick=async()=>{
+      await copyText(r.code);
+      const used=JSON.parse(localStorage.getItem("wool_used")||"[]");
+      if(!used.includes(String(r.id)))used.push(String(r.id));
+      localStorage.setItem("wool_used",JSON.stringify(used));
+      draw();
+    };
+    b.append(status,btn);card.append(tag,h,val,b);box.append(card);
+  });
+  const pages=Math.max(1,Math.ceil(totalMatching/pageSize));
+  $("pageInfo").textContent=`Page ${page+1} / ${pages} · ${totalMatching}`;
+  $("prevPage").disabled=page===0;
+  $("nextPage").disabled=(page+1)*pageSize>=totalMatching;
+}
+$("prevPage").onclick=()=>{if(page>0){page--;loadCodes()}};
+$("nextPage").onclick=()=>{if((page+1)*pageSize<totalMatching){page++;loadCodes()}};
+$("search").oninput=()=>{page=0;loadCodes()};
+
+/* ================= د سپارلو فورم ================= */
+$("submitForm").onsubmit=async e=>{
+  e.preventDefault();
+  $("submitStatus").textContent="Sending…";
+  const payload={p_code:$("newCode").value.trim(),p_category:$("category").value,p_title:$("newTitle").value.trim()||null};
+  const {error}=await db.rpc("submit_nusuk_code",payload);
+  if(error){$("submitStatus").textContent=error.message;return}
+  $("submitForm").reset();
+  $("submitStatus").textContent="Published! Thank you ✓";
+  page=0; await loadCodes();
+};
+
+/* ================= د اډمین ================= */
+$("loginForm").onsubmit=async e=>{
+  e.preventDefault();
+  $("loginStatus").textContent="Signing in…";
+  const {data,error}=await db.auth.signInWithPassword({email:$("adminEmail").value.trim(),password:$("adminPassword").value});
+  if(error){$("loginStatus").textContent=error.message;return}
+  session=data.session; $("loginStatus").textContent="Signed in."; await refreshAdmin();
+};
+async function refreshAdmin(){
+  const {data:{user}}=await db.auth.getUser();
+  if(!user){$("adminBox").classList.add("hide");return}
+  if(user.email!==OWNER_EMAIL){$("loginStatus").textContent="Not the owner.";await db.auth.signOut();return}
+  $("loginBox").classList.add("hide");
+  $("adminBox").classList.remove("hide");
+  $("adminIdentity").textContent=user.email;
+  await loadAdminLists();
+}
+async function loadAdminLists(){
+  const {data,error}=await db.from("nusuk_codes").select("*").order("created_at",{ascending:false});
+  if(error){$("pendingList").textContent=error.message;return}
+  const all=data||[];
+  const active=all.filter(x=>x.is_active);
+  const disabled=all.filter(x=>!x.is_active);
+  $("totalCount").textContent=all.length;
+  $("activeCount").textContent=active.length;
+  $("disabledCount").textContent=disabled.length;
+  renderAdminGroup("manageList",active);
+  renderAdminGroup("pendingList",disabled);
+}
+function renderAdminGroup(id,list){
+  const box=$(id); box.innerHTML="";
+  if(!list.length){const p=document.createElement("p");p.className="small";p.textContent="Nothing here.";box.append(p);return}
+  list.forEach(r=>{
+    const item=document.createElement("div");item.className="admin-item";
+    const info=document.createElement("div");
+    const b=document.createElement("b");b.textContent=r.code;
+    const sm=document.createElement("div");sm.className="small";sm.textContent=(r.title||r.category)+" · "+r.category;
+    info.append(b,sm);
+    const actions=document.createElement("div");actions.className="row";
+    const toggle=document.createElement("button");toggle.textContent=r.is_active?"Disable":"Enable";
+    toggle.onclick=()=>adminUpdate(r.id,{is_active:!r.is_active});
+    const del=document.createElement("button");del.className="danger";del.textContent="Delete";
+    del.onclick=()=>{if(confirm("Delete permanently?"))adminDelete(r.id)};
+    actions.append(toggle,del);
+    item.append(info,actions);box.append(item);
+  });
 }
 async function adminUpdate(id,patch){const {error}=await db.from("nusuk_codes").update(patch).eq("id",id);if(error){toast(error.message);return}await loadCodes();await loadAdminLists()}
 async function adminDelete(id){const {error}=await db.from("nusuk_codes").delete().eq("id",id);if(error){toast(error.message);return}await loadCodes();await loadAdminLists()}
-$("refreshAdmin").onclick=loadAdminLists;$("logout").onclick=async()=>{await db.auth.signOut();$("adminBox").classList.add("hide");$("loginBox").classList.remove("hide");$("adminPassword").value=""};
-db.auth.onAuthStateChange((_event,s)=>{session=s;if(s)refreshAdmin()});
-$("year").textContent=new Date().getFullYear();setLang();loadCodes();db.auth.getSession().then(({data})=>{session=data.session;if(session)refreshAdmin()});
-</script></body></html>
+$("refreshAdmin").onclick=loadAdminLists;
+$("logout").onclick=async()=>{await db.auth.signOut();$("adminBox").classList.add("hide");$("loginBox").classList.remove("hide");$("adminPassword").value=""};
+
+/* ================= د اسعارو منطق ================= */
+const CURRENCIES=[
+  {c:"USD",n:"US Dollar",f:"🇺🇸"},
+  {c:"AFN",n:"Afghan Afghani",f:"🇦🇫"},
+  {c:"EUR",n:"Euro",f:"🇪🇺"},
+  {c:"GBP",n:"British Pound",f:"🇬🇧"},
+  {c:"SAR",n:"Saudi Riyal",f:"🇸🇦"},
+  {c:"AED",n:"UAE Dirham",f:"🇦🇪"},
+  {c:"PKR",n:"Pakistani Rupee",f:"🇵🇰"},
+  {c:"IRR",n:"Iranian Rial",f:"🇮🇷"},
+  {c:"INR",n:"Indian Rupee",f:"🇮🇳"},
+  {c:"TRY",n:"Turkish Lira",f:"🇹🇷"},
+  {c:"CNY",n:"Chinese Yuan",f:"🇨🇳"}
+];
+function populateCurrencySelects(){
+  const from=$("fxFrom"), to=$("fxTo");
+  const savedFrom=localStorage.getItem("wool_fx_from")||"USD";
+  const savedTo=localStorage.getItem("wool_fx_to")||"AFN";
+  from.innerHTML=""; to.innerHTML="";
+  CURRENCIES.forEach(x=>{
+    const o1=document.createElement("option");o1.value=x.c;o1.textContent=`${x.f} ${x.c} — ${x.n}`;
+    const o2=document.createElement("option");o2.value=x.c;o2.textContent=`${x.f} ${x.c} — ${x.n}`;
+    from.append(o1); to.append(o2);
+  });
+  from.value=savedFrom; to.value=savedTo;
+  from.onchange=()=>{localStorage.setItem("wool_fx_from",from.value);updateFxResult()};
+  to.onchange=()=>{localStorage.setItem("wool_fx_to",to.value);updateFxResult()};
+}
+async function loadFxRates(){
+  $("fxResult").textContent="…";
+  try{
+    // د open.er-api.com وړیا API (د کیلي اړتیا نشته، د USD base)
+    const r=await fetch("https://open.er-api.com/v6/latest/USD");
+    const j=await r.json();
+    if(j.result!=="success") throw new Error("API error");
+    fxRates=j.rates; fxBase="USD";
+    localStorage.setItem("wool_fx_cache",JSON.stringify({rates:fxRates,ts:Date.now()}));
+    updateFxResult();
+    toast("Rates updated ✓");
+  }catch(e){
+    // که API کار نه کوي، د کیش څخه وکاروه
+    const cached=localStorage.getItem("wool_fx_cache");
+    if(cached){
+      const c=JSON.parse(cached);
+      fxRates=c.rates; fxBase="USD";
+      updateFxResult();
+      toast("Using cached rates");
+    }else{
+      $("fxResult").textContent="—";
+      $("fxRate").textContent="Could not load rates.";
+    }
+  }
+}
+function updateFxResult(){
+  const amt=parseFloat($("fxAmount").value)||0;
+  const from=$("fxFrom").value, to=$("fxTo").value;
+  if(!fxRates[from]||!fxRates[to]){$("fxResult").textContent="—";return}
+  // USD base: amount / rate[from] * rate[to]
+  const result=(amt / fxRates[from]) * fxRates[to];
+  const fmt=new Intl.NumberFormat(lang==="ps"?"ps-AF":lang==="fa"?"fa-AF":lang==="ur"?"ur-PK":lang==="ar"?"ar-SA":"en-US",{maximumFractionDigits:2});
+  $("fxResult").textContent=fmt.format(result)+" "+to;
+  $("fxRate").textContent=`1 ${from} = ${fmt.format((1/fxRates[from])*fxRates[to])} ${to}`;
+}
+$("fxAmount").oninput=updateFxResult;
+$("fxSwap").onclick=()=>{
+  const f=$("fxFrom").value, t=$("fxTo").value;
+  $("fxFrom").value=t; $("fxTo").value=f;
+  localStorage.setItem("wool_fx_from",t); localStorage.setItem("wool_fx_to",f);
+  updateFxResult();
+};
+$("fxRefresh").onclick=loadFxRates;
+
+/* ================= پیل ================= */
+$("year").textContent=new Date().getFullYear();
+$("lang").value=localStorage.getItem("wool_lang")||"en";
+populateCurrencySelects();
+setLang();
+loadCodes();
+// د اسعارو کیش ۵ دقیقې
+const fxCache=localStorage.getItem("wool_fx_cache");
+if(fxCache){
+  const c=JSON.parse(fxCache);
+  if(Date.now()-c.ts < 5*60*1000){fxRates=c.rates;fxBase="USD";updateFxResult()}
+}
+$("lang").onchange=setLang;
+db.auth.getSession().then(({data})=>{session=data.session;if(session)refreshAdmin()});
+db.auth.onAuthStateChange((_e,s)=>{session=s;if(s)refreshAdmin()});
+</script>
+</body>
+</html>
